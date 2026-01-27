@@ -1,21 +1,21 @@
 import React from "react";
 import logo from "../../assets/images/CaringUp.svg";
+import {Link} from 'react-router-dom'
+
 const Header = () => {
   return (
     <header className="w-full  ">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img
-              src={logo}
-              // alt="CaringUp"
-              className="h-[40px] w-[139px]"
-            />
-            {/* <span className="font-semibold text-lg text-gray-800">
-              CARINGUP
-            </span> */}
+            <Link to="/">
+              <img
+                src={logo}
+                alt="CaringUp"
+                className="h-[40px] w-[139px] cursor-pointer"
+              />
+            </Link>
           </div>
 
           {/* Navigation */}
@@ -33,7 +33,6 @@ const Header = () => {
               Go to WeCare
             </button>
           </div>
-
         </div>
       </div>
     </header>
