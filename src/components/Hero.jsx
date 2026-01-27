@@ -1,0 +1,76 @@
+import React from "react";
+import HeroImage from "../assets/images/Hero.jpg";
+import CustomButton from "./Button";
+
+const Hero = ({
+  title,
+  description,
+  primaryBtn,
+  secondaryBtn,
+  backgroundImage = HeroImage,
+}) => {
+  return (
+    <section className="w-full flex justify-center mt-6 px-4">
+      <div
+        className="relative rounded-[64px] overflow-hidden bg-[#0D0F0D]" // Base color from Figma
+        style={{
+          width: "1416px",
+          height: "757px",
+        }}
+      >
+        {/* The Background Image Layer */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('${backgroundImage}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* The Fixed Linear Gradient Overlay:
+            Using the exact Figma hex values: #0D0F0D at 0% and #0B0C0B at 100%
+        */}
+        <div 
+          className="absolute inset-0" 
+          style={{
+            background: "linear-gradient(180deg, rgba(13, 15, 13, 0) 0%, rgba(11, 12, 11, 1) 100%)"
+          }} 
+        />
+
+        {/* Content Wrapper */}
+        <div className="relative z-10 h-full max-w-[850px] m-auto flex flex-col items-center justify-center text-center px-6">
+          <h1 className="text-white heading-1 leading-[1.1] tracking-tight">
+            {title}
+          </h1>
+          
+          <p className="mt-8 text-[18px] md:text-[20px] text-white max-w-[650px] leading-relaxed">
+            {description}
+          </p>
+
+          {/* Conditional Button Container */}
+          {(primaryBtn || secondaryBtn) && (
+            <div className="flex items-center gap-4 pt-16">
+              {primaryBtn && (
+                <CustomButton 
+                  variant="secondary" 
+                  label={primaryBtn.label} 
+                  onClick={primaryBtn.onClick} 
+                />
+              )}
+              {secondaryBtn && (
+                <CustomButton 
+                  variant="tertiary" 
+                  label={secondaryBtn.label} 
+                  onClick={secondaryBtn.onClick} 
+                />
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

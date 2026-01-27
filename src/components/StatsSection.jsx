@@ -1,0 +1,4 @@
+// // Props:
+// {
+//     stats: [{ label, value }]
+//   }
