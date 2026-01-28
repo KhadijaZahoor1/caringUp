@@ -22,24 +22,24 @@ const ServiceProvidersSection = () => {
   ];
 
   return (
-    <section className="w-full flex justify-center py-16">
+    <section className="w-full flex justify-center">
       {/* Fixed Dimension Container */}
       <div
-        className="relative max-w-[1416px] h-[757px] bg-white rounded-[64px]  flex flex-col items-center justify-center px-6"
+        className="relative pb-[100px] pt-[140px] bg-white rounded-[64px]  flex flex-col items-center justify-center px-6"
         style={{ width: "1416px" }}
       >
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-[48px] font-bold text-slate-900 mb-4 tracking-tight">
+        <div className="text-center">
+          <h2 className="heading-2">
             For Care Service Providers
           </h2>
-          <p className="text-gray-400 text-[16px] font-medium uppercase tracking-wide">
+          <p className="body-text font-light pt-5">
             Launch & Scale Your Monitoring Service—Without Infrastructure
           </p>
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1200px] mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1200px] py-16">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
@@ -51,7 +51,7 @@ const ServiceProvidersSection = () => {
         </div>
 
         {/* Bottom Action Button */}
-        <button className="border border-gray-200 text-slate-800 font-semibold px-8 py-3 rounded-full hover:bg-gray-50 transition-colors shadow-sm text-[14px]">
+        <button className=" px-4 py-3 rounded-full body-text text-primary border border-borderClr">
           Become a Care Partner
         </button>
       </div>
@@ -68,7 +68,7 @@ const ServiceCard = ({ icon, title, description }) => (
     </div>
 
     {/* Title */}
-    <h3 className="text-[20px] font-bold text-slate-900 mb-3 leading-tight">
+    <h3 className="body-text font-semibold text-lg text-primary">
       {title}
     </h3>
   </div>

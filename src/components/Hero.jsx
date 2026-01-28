@@ -10,7 +10,7 @@ const Hero = ({
   backgroundImage = HeroImage,
 }) => {
   return (
-    <section className="w-full flex justify-center mt-6 px-4">
+    <section className="w-full flex justify-center px-4">
       <div
         className="relative rounded-[64px] overflow-hidden bg-[#0D0F0D]" // Base color from Figma
         style={{
@@ -39,18 +39,18 @@ const Hero = ({
         />
 
         {/* Content Wrapper */}
-        <div className="relative z-10 h-full max-w-[850px] m-auto flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-white heading-1 leading-[1.1] tracking-tight">
+        <div className="relative z-10 h-full max-w-[720px] m-auto flex flex-col items-center justify-center text-center px-6">
+          <h1 className="text-white heading-1 tracking-tight mb-6">
             {title}
           </h1>
           
-          <p className="mt-8 text-[18px] md:text-[20px] text-white max-w-[650px] leading-relaxed">
+          <p className="text-white body-text mb-16">
             {description}
           </p>
 
           {/* Conditional Button Container */}
           {(primaryBtn || secondaryBtn) && (
-            <div className="flex items-center gap-4 pt-16">
+            <div className="flex items-center gap-4">
               {primaryBtn && (
                 <CustomButton 
                   variant="secondary" 

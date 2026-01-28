@@ -8,6 +8,7 @@ import CustomButton from "./Button";
 import weCareLogo from "../assets/images/weCareLogo.png";
 import CaringUpLogo from "../assets/images/CaringUp.svg";
 import careaidelogo from "../assets/images/careaide-logo.png";
+import checkboxcircle from '../assets/icons/checkbox-circle-fill.png'
 
 /**
  * FeatureOverview Component
@@ -45,10 +46,10 @@ const FeatureOverview = ({
 
         {/* Text Content */}
         <div className="py-6">
-          <h2 className="text-[32px] font-bold text-slate-900 mb-4 leading-tight tracking-tight">
+          <h3 className="heading-3">
             {title}
-          </h2>
-          <p className="text-gray-500 text-[15px]  leading-relaxed max-w-[90%]">
+          </h3>
+          <p className="pt-5 text-secondary body-text font-light">
             {description}
           </p>
         </div>
@@ -58,25 +59,11 @@ const FeatureOverview = ({
             <li key={index} className="flex items-start gap-4">
               <div className="mt-1 flex-shrink-0">
                 {/* Green Tick Icon */}
-                <div className="bg-green-500 rounded-full p-0.5">
-                  <svg
-                    className="w-3.5 h-3.5 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="3"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                </div>
+               <img src={checkboxcircle} />
               </div>
-              <p className="text-[15px] text-slate-800 leading-tight">
-                <span className="font-bold">{item.label} — </span>
-                <span className="text-gray-600">{item.desc}</span>
+              <p className="">
+                <span className="body-text text-primary font-medium">{item.label} — </span>
+                <span className="body-text text-primary font-normal">{item.desc}</span>
               </p>
             </li>
           ))}
@@ -177,12 +164,12 @@ export default function App() {
   ];
 
   return (
-    <div className="py-[120px]">
-      <div>
-        <h3 className="heading-3 text-center max-w-[936px] mx-auto">
+    <div className="pt-[120px] pb-[60px]">
+     
+        <h3 className="heading-2 text-center max-w-[936px] mx-auto">
           The CaringUp Platform — Integrated Public Health & Care Management
         </h3>
-      </div>
+     
       <div className="flex flex-col gap-8 py-16 max-w-[1176px] mx-auto">
         {data.map((item, idx) => (
           <FeatureOverview key={idx} {...item} />
@@ -190,7 +177,7 @@ export default function App() {
       </div>
 
       {/* Centered Explore Button as seen in your screenshot */}
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center">
         <CustomButton variant="primary" label="Explore the Platform" />
       </div>
     </div>

@@ -6,6 +6,10 @@ module.exports = {
 ],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['"Funnel Display"', 'sans-serif'],
+        body: ['Geist', 'system-ui', 'sans-serif'],
+      },
       colors: {
         primary: "#0F172A",
         secondary: "#64748B",

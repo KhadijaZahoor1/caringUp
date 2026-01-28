@@ -39,7 +39,7 @@ const CustomButton = ({
       {/* Main Label Pill */}
       <span
         className={`
-          flex items-center justify-center font-medium text-sm md:text-base 
+          flex items-center justify-center font-medium text-sm md:text-base font-body
           rounded-full px-6 py-2.5 z-10
           ${selected.label}
         `}
@@ -52,7 +52,7 @@ const CustomButton = ({
         <div
           className={`
 
-            flex items-center justify-center rounded-full -ml-3  w-11 h-11  ${selected.icon} ${selected.hasBorder ? "border" : "border-none"}
+            flex items-center justify-center rounded-full -ml-2  w-11 h-11  ${selected.icon} ${selected.hasBorder ? "border" : "border-none"}
 
           `}
         >
