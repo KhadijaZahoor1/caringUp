@@ -12,7 +12,7 @@ const CTASection = ({
   return (
     <div className="w-full flex justify-center py-20 px-3">
       <div
-        className="relative rounded-[64px] overflow-hidden flex flex-col items-center justify-center text-center px-6 shadow-2xl bg-[#0B0C0B]"
+        className="relative rounded-[64px] overflow-hidden flex flex-col items-center justify-center text-center px-6 bg-[#0B0C0B]"
         style={{
           width: "1416px",
           height: "560px",
@@ -39,15 +39,15 @@ const CTASection = ({
         />
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-10 flex flex-col items-center max-w-[992px] mx-auto px-4">
           {title && (
-            <h2 className="text-white font-bold text-[32px] md:text-[48px] leading-[1.1] max-w-[850px] whitespace-pre-line tracking-tight">
+            <h2 className="text-white heading-2 text-5xl leading-[4.2rem]">
               {title}
             </h2>
           )}
 
           {description && (
-            <p className="mt-6 text-[16px] md:text-[18px] text-white/90 max-w-[620px] leading-relaxed">
+            <p className="mt-6 text-[16px] md:text-[18px] body-text text-white">
               {description}
             </p>
           )}

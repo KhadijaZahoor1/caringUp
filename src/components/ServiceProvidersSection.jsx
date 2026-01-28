@@ -39,7 +39,7 @@ const ServiceProvidersSection = () => {
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1200px] py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1224px] py-16">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
