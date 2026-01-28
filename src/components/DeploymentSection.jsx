@@ -135,9 +135,9 @@ const DeploymentSection = () => {
   ];
 
   return (
-    <section className="max-w-[1176px] mx-auto py-[120px] px-6 flex flex-col items-center">
+    <section className="max-w-[1176px] mx-auto py-[120px] flex flex-col items-center">
       {/* Section Title */}
-      <h2 className="text-[56px] font-bold text-center tracking-tight text-[#0f172a]">
+      <h2 className="heading-2 text-center">
         Deployment & Pricing Structure
       </h2>
 

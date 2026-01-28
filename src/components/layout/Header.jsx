@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom'
 
 const Header = () => {
   return (
-    <header className="w-full  ">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+    <header className="w-full">
+      <div className="max-w-[1168px] mx-auto">
+        <div className="flex items-center justify-between py-[26px] font-body">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <Link to="/">
@@ -29,7 +29,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div>
-            <button className="px-5 py-2 rounded-full border  text-sm font-medium  transition">
+            <button className="px-5 py-2 rounded-full border font-body text-sm font-medium  transition">
               Go to WeCare
             </button>
           </div>
@@ -41,8 +41,8 @@ const Header = () => {
 
 const NavItem = ({ label }) => {
   return (
-    <button className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 text-sm font-medium">
-      <span>{label}</span>
+    <button className="flex items-center space-x-1 text-primary font-body hover:text-gray-900 text-base font-normal">
+      <span className="font-body">{label}</span>
       <svg
         className="w-4 h-4"
         fill="none"

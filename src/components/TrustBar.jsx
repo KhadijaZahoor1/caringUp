@@ -19,15 +19,15 @@ const TrustBar = () => {
     */
     <section className="w-full flex justify-center bg-transparent -mt-[80px]">
       <div 
-        className="w-full max-w-[1416px] bg-[#E2E8F0] rounded-b-[64px] pt-[120px] pb-16 px-10 flex flex-col items-center border-x border-b border-gray-100"
+        className="w-full max-w-[1416px] bg-[#E2E8F0] rounded-b-[64px] pt-[112px] pb-10 px-10 flex flex-col items-center border-x border-b border-borderClr"
       >
         {/* Sub-header text */}
-        <p className="text-center text-[#64748B] font-semibold text-sm">
+        <p className="text-center text-[#64748B] font-body font-semibold text-sm pb-8">
           Trusted Across Healthcare Ecosystem
         </p>
 
         {/* Logos Container */}
-        <div className="flex flex-wrap justify-center items-center pt-10 gap-12 md:gap-20 lg:gap-28 w-full">
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 lg:gap-28 w-full">
           {logos.map((logo, index) => (
             <div 
               key={index} 

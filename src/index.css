@@ -3,22 +3,31 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "";
+}
+
+
+
+
+
+
 /* ===== Typography ===== */
 @layer components {
   .heading-1 {
-    @apply text-[56px] font-semibold leading-[64px];
+    @apply text-[65px] font-semibold leading-[75px] font-heading;
   }
 
   .heading-2 {
-    @apply text-4xl font-semibold;
+    @apply text-[42px] leading-[4rem] font-semibold font-heading;
   }
 
   .heading-3 {
-    @apply text-[32px] leading-[40px] font-semibold text-primary;
+    @apply text-[32px] font-medium text-primary font-heading leading-10;
   }
   
   .body-text {
-    @apply text-base leading-6 font-normal text-secondary;
+    @apply text-base font-normal text-secondary font-body;
   }
 }
 
