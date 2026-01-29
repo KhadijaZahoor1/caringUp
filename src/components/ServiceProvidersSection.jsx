@@ -25,7 +25,7 @@ const ServiceProvidersSection = () => {
     <section className="w-full flex justify-center">
       {/* Fixed Dimension Container */}
       <div
-        className="relative pb-[100px] pt-[140px] bg-white rounded-[64px]  flex flex-col items-center justify-center px-6"
+        className="relative md:pb-[100px] md:pt-[140px] md:px-6 px-5 py-20 bg-white rounded-[40px] md:rounded-[64px]  flex flex-col items-center justify-center"
         style={{ width: "1416px" }}
       >
         {/* Header Section */}

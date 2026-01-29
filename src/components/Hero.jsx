@@ -10,13 +10,9 @@ const Hero = ({
   backgroundImage = HeroImage,
 }) => {
   return (
-    <section className="w-full flex justify-center px-4">
+    <section className="lg:px-4">
       <div
-        className="relative rounded-[64px] overflow-hidden bg-[#0D0F0D]" // Base color from Figma
-        style={{
-          width: "1416px",
-          height: "757px",
-        }}
+        className="lg:h-[757px] h-[650px] max-w-[1416px] relative rounded-[40px] md:rounded-[64px] overflow-hidden bg-[#0D0F0D]" // Base color from Figma
       >
         {/* The Background Image Layer */}
         <div 

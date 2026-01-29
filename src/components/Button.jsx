@@ -39,10 +39,7 @@ const CustomButton = ({
       {/* Main Label Pill */}
       <span
         className={`
-          flex items-center justify-center font-medium text-sm md:text-base font-body
-          rounded-full px-6 py-2.5 z-10
-          ${selected.label}
-        `}
+          flex items-center justify-center font-medium button-text rounded-full px-6 py-2.5 z-10 ${selected.label}`}
       >
         {label}
       </span>
@@ -50,11 +47,7 @@ const CustomButton = ({
       {/* Detached Icon Circle */}
       {showIcon && Icon && (
         <div
-          className={`
-
-            flex items-center justify-center rounded-full -ml-2  w-11 h-11  ${selected.icon} ${selected.hasBorder ? "border" : "border-none"}
-
-          `}
+          className={`flex items-center justify-center rounded-full -ml-2 md:w-[42px] md:h-[42px] w-[36px] h-[36px] ${selected.icon} ${selected.hasBorder ? "border" : "border-none"}`}
         >
           <Icon  />
         </div>

@@ -10,8 +10,6 @@
 
 
 
-
-
 /* ===== Typography ===== */
 @layer components {
   .heading-1 {
@@ -19,17 +17,66 @@
   }
 
   .heading-2 {
-    @apply text-[42px] leading-[4rem] font-semibold font-heading;
+    @apply text-[48px] leading-[4.2rem] font-semibold font-heading text-primary;
   }
 
   .heading-3 {
-    @apply text-[32px] font-medium text-primary font-heading leading-10;
+    @apply text-[32px] font-medium leading-10 font-heading text-primary;
+  }
+
+  .body-text {
+    @apply text-base font-normal font-body text-secondary;
   }
   
-  .body-text {
-    @apply text-base font-normal text-secondary font-body;
+  .button-text{
+     @apply text-base font-normal font-body text-primary
+  }
+
+  /* ===== Mobile styles ===== */
+  @media (min-width: 320px) and (max-width: 600px) {
+    .heading-1 {
+      @apply text-[40px] leading-[48px];
+    }
+
+    .heading-2 {
+      @apply text-[28px] leading-[2rem];
+    }
+
+    .heading-3 {
+      @apply text-[24px] leading-8;
+    }
+
+    .body-text {
+      @apply text-sm;
+    }
+    .button-text{
+     @apply text-xs
+  }
+  }
+
+   /* ===== tablet styles ===== */
+   @media (min-width: 600px) and (max-width: 1024px) {
+    .heading-1 {
+      @apply text-[40px] leading-[48px];
+    }
+
+    .heading-2 {
+      @apply text-[36px] leading-[3.2rem];
+    }
+
+    .heading-3 {
+      @apply text-[24px] leading-8;
+    }
+
+    .body-text {
+      @apply text-base;
+    }
+    .button-text{
+     @apply text-sm
+  }
   }
 }
+
 
 /* ===== Global styles ===== */
 body {

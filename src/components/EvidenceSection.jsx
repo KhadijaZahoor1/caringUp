@@ -29,10 +29,10 @@ const EvidenceCard = ({ icon, title, description }) => (
       </div>
 
       <div>
-        <h3 className="text-[22px] font-body font-medium text-primary pb-3">
+        <h3 className="md:text-[22px] text-xl font-body font-medium text-primary pb-3">
           {title}
         </h3>
-        <p className="text-tertairy text-sm leading-[1.6] font-normal font-body">
+        <p className="text-tertairy body-text">
           {description}
         </p>
       </div>
@@ -70,14 +70,14 @@ const EvidenceSection = () => {
   ];
 
   return (
-    <section className="w-full flex justify-center py-[120px]">
-      <div className="max-w-[1440px] w-full px-[132px] flex flex-col md:flex-row items-start">
+    <section className="w-full flex justify-center md:py-[210px] py-20">
+      <div className="max-w-[1440px] mx-auto lg:px-[132px] px-5 flex flex-col md:flex-row items-start">
         {/* Left Content Column */}
         <div className="w-full md:w-[40%] md:sticky md:top-24">
-          <h3 className="text-[48px] heading-3 leading-[4.3rem] mb-6">
+          <h3 className="heading-2 mb-6">
             Evidence and <br /> Validation
           </h3>
-          <p className="body-text font-light max-w-[320px] pb-16">
+          <p className="body-text font-light max-w-[320px] pb-8 md:pb-16">
             Backed by one of Asia’s largest, award-winning randomized controlled
             trials
           </p>
@@ -86,7 +86,7 @@ const EvidenceSection = () => {
         </div>
 
         {/* Right Cards Column */}
-        <div className="w-full md:w-[60%] flex flex-col gap-6">
+        <div className="w-full md:w-[60%] flex flex-col gap-6 pt-8 md:pt-0">
           {evidenceData.map((item, index) => (
             <EvidenceCard
               key={index}

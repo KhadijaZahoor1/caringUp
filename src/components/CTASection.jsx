@@ -10,14 +10,9 @@ const CTASection = ({
   bgImage = CTABackground,
 }) => {
   return (
-    <div className="w-full flex justify-center py-20 px-3">
+    <div className="py-20 md:px-3 px-0">
       <div
-        className="relative rounded-[64px] overflow-hidden flex flex-col items-center justify-center text-center px-6 bg-[#0B0C0B]"
-        style={{
-          width: "1416px",
-          height: "560px",
-        }}
-      >
+        className="h-[560px] max-w-[1416px] relative rounded-[40px] md:rounded-[64px] overflow-hidden flex flex-col items-center justify-center text-center px-6 bg-[#0B0C0B]">
         {/* Background Image Layer */}
         <div 
           className="absolute inset-0"
@@ -41,13 +36,13 @@ const CTASection = ({
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center max-w-[992px] mx-auto px-4">
           {title && (
-            <h2 className="text-white heading-2 text-5xl leading-[4.2rem]">
+            <h2 className="text-white heading-2">
               {title}
             </h2>
           )}
 
           {description && (
-            <p className="mt-6 text-[16px] md:text-[18px] body-text text-white">
+            <p className="mt-6 body-text text-sm md:text-[18px] text-white">
               {description}
             </p>
           )}

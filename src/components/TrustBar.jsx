@@ -1,6 +1,6 @@
 import React from "react";
-import homeLogo1 from '../assets/images/homeLogo1.png';
-import homeLogo2 from '../assets/images/homeLogo2.png';
+import homeLogo1 from "../assets/images/homeLogo1.png";
+import homeLogo2 from "../assets/images/homeLogo2.png";
 
 const TrustBar = () => {
   const logos = [
@@ -18,25 +18,23 @@ const TrustBar = () => {
        and a relative position to keep the Hero curve visible on top.
     */
     <section className="w-full flex justify-center bg-transparent -mt-[80px]">
-      <div 
-        className="w-full max-w-[1416px] bg-[#E2E8F0] rounded-b-[64px] pt-[112px] pb-10 px-10 flex flex-col items-center border-x border-b border-borderClr"
-      >
+      <div className="w-full max-w-[1416px] bg-[#E2E8F0] md:rounded-b-[64px] rounded-b-[40px] pt-[112px] pb-10 px-10 flex flex-col items-center border-x border-b border-borderClr">
         {/* Sub-header text */}
-        <p className="text-center text-[#64748B] font-body font-semibold text-sm pb-8">
+        <p className="text-center text-[#64748B] body-text font-medium pb-8">
           Trusted Across Healthcare Ecosystem
         </p>
 
         {/* Logos Container */}
         <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 lg:gap-28 w-full">
           {logos.map((logo, index) => (
-            <div 
-              key={index} 
-              className=" cursor-pointer"
+            <div
+              key={index}
+              className={`cursor-pointer ${index > 1 ? "hidden sm:block" : ""}`}
             >
-              <img 
-                src={logo.icon} 
-                alt={logo.name} 
-                className="w-auto object-contain" 
+              <img
+                src={logo.icon}
+                alt={logo.name}
+                className="w-auto object-contain"
               />
             </div>
           ))}

@@ -35,10 +35,10 @@ const FeatureOverview = ({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }}
-      className={` ${bgColor} rounded-[32px] border border-borderClr flex items-center px-12 py-10 relative`}
+      className={` ${bgColor} rounded-[32px] border border-borderClr flex items-center md:flex-row flex-col md:px-12 px-5 py-10 relative`}
     >
       {/* Left Content Column */}
-      <div className="w-1/2 flex flex-col justify-center">
+      <div className="md:w-1/2 w-full flex flex-col justify-center">
         {/* Logo Area */}
         <div className="max-w-[100px] ">
           <img src={logo} className="w-full" />
@@ -71,8 +71,8 @@ const FeatureOverview = ({
       </div>
 
       {/* Right Image Column */}
-      <div className="w-1/2 flex justify-end self-start pt-3 relative">
-      <div className="max-w-[425px]">
+      <div className="md:w-1/2 w-full flex justify-end self-start md:pt-3 pt-8 relative">
+      <div className="md:max-w-[425px] w-full">
         {imageSrc && (
           <img
             src={imageSrc}
@@ -164,9 +164,9 @@ export default function App() {
   ];
 
   return (
-    <div className="pt-[120px] pb-[60px]">
+    <div className="md:pt-[120px] pt-20 pb-[60px]">
      
-        <h3 className="heading-2 text-center max-w-[936px] mx-auto">
+        <h3 className="heading-2 lg:text-[44px] text-[28px] lg:leading-[4rem] leading-[2rem] md:text-[36px] md:leading-[3.2rem] text-center max-w-[936px] mx-auto">
           The CaringUp Platform — Integrated Public Health & Care Management
         </h3>
      
