@@ -62,7 +62,7 @@ const FeatureOverview = ({
                <img src={checkboxcircle} />
               </div>
               <p className="">
-                <span className="body-text text-primary font-medium">{item.label} — </span>
+                <span className="body-text text-primary font-medium">{item.label} </span>
                 <span className="body-text text-primary font-normal">{item.desc}</span>
               </p>
             </li>
