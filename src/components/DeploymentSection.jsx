@@ -22,7 +22,7 @@ const DeploymentSection = () => {
   return (
     <section className="max-w-[1176px] mx-auto md:py-[120px] py-20 flex flex-col items-center">
       {/* Section Title */}
-      <h2 className="heading-2 text-center">
+      <h2 className="heading-2 text-center px-3 md:px-0">
         Deployment & Pricing Structure
       </h2>
 

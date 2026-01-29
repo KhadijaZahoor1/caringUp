@@ -50,16 +50,15 @@ const Header = () => {
         {/* Mobile Dropdown with Transition */}
         <div className={`
           lg:hidden absolute left-0 w-full bg-white transition-all duration-300 ease-in-out z-50 overflow-hidden
-          ${isOpen ? 'max-h-[500px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}
+          ${isOpen ? 'max-h-[600px] opacity-100 visible' : 'max-h-0 opacity-0 invisible'}
         `}>
           <div className="mx-4 mb-6 shadow-xl rounded-b-lg border-t-4 border-primary bg-white">
             <ul className="flex flex-col">
-              <MobileNavItem label="For Payers" />
-              <MobileNavItem label="For Pharma" />
-              <MobileNavItem label="For Healthcare" />
-              <MobileNavItem label="For Government" />
-              <MobileNavItem label="About Us" />
-              <MobileNavItem label="Get CareAide" />
+              <MobileNavItem  label="Products" />
+              <MobileNavItem label="Solutions" />
+              <MobileNavItem label="Evidence" />
+              <MobileNavItem label="Partners" />
+              <MobileNavItem label="Company" />
             </ul>
             {/* Mobile CTA Button */}
             <div className="p-6 pt-2">
