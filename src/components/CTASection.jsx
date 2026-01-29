@@ -12,7 +12,7 @@ const CTASection = ({
   return (
     <div className="py-20 md:px-3 px-0">
       <div
-        className="h-[560px] max-w-[1416px] relative rounded-[40px] md:rounded-[64px] overflow-hidden flex flex-col items-center justify-center text-center px-6 bg-[#0B0C0B]">
+        className="h-[560px] max-w-[1416px] relative md:rounded-[64px] overflow-hidden flex flex-col items-center justify-center text-center px-6 bg-[#0B0C0B]">
         {/* Background Image Layer */}
         <div 
           className="absolute inset-0"

@@ -12,7 +12,7 @@ const Hero = ({
   return (
     <section className="lg:px-4">
       <div
-        className="lg:h-[757px] h-[650px] max-w-[1416px] relative rounded-[40px] md:rounded-[64px] overflow-hidden bg-[#0D0F0D]" // Base color from Figma
+        className="lg:h-[757px] h-[650px] max-w-[1416px] relative md:rounded-[64px] overflow-hidden bg-[#0D0F0D]" // Base color from Figma
       >
         {/* The Background Image Layer */}
         <div 
