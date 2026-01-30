@@ -93,7 +93,7 @@ const ClinicalCentre = () => {
 
       {/* Capabilities Section */}
       <div className="bg-white rounded-3xl border border-borderClr max-w-[1176px] mx-auto my-16 shadow-[0_1px_4px_rgba(12,12,13,0.05)] py-8 px-10">
-        <h3 className="text-2xl font-bold text-[#0F172A] mb-8">Key Capabilities</h3>
+        <h3 className="heading-6 mb-8">Key Capabilities</h3>
         <div className="divide-y divide-borderClr">
           {capabilities.map((cap, index) => (
             <div key={index} className="py-6">
@@ -101,13 +101,13 @@ const ClinicalCentre = () => {
                 onClick={() => setOpenCapability(openCapability === index ? -1 : index)}
                 className="w-full flex justify-between items-center text-left"
               >
-                <span className={`text-lg font-semibold ${openCapability === index ? 'text-[#0F172A]' : 'text-[#475569]'}`}>
+                <span className={`body-text font-semibold ${openCapability === index ? 'text-[#0F172A]' : 'text-[#475569]'}`}>
                   {cap.title}
                 </span>
                  {openCapability === index ? <UpArrow /> : <DownArrow />}
               </button>
               {openCapability === index && (
-                <div className="mt-4 text-[#64748B] text-lg leading-relaxed animate-fadeIn">
+                <div className="mt-4 body-text animate-fadeIn">
                   {cap.detail}
                 </div>
               )}

@@ -26,17 +26,17 @@ const ClinicalTrial = () => {
       <div className='max-w-[1176px] mx-auto'>
       {/* Header Area */}
       <div className="text-center">
-        <h2 className="text-[48px] font-bold text-[#0F172A] leading-tight">
+        <h2 className="heading-2">
           One of Asia's Largest Randomized<br />Control Trial
         </h2>
-        <p className="text-[#64748B] text-lg py-6">
+        <p className="body-text py-6">
           Registered with the Malaysia National Medical Research Register (NMRR)
         </p>
         
         {/* Participants Badge */}
         <div className="inline-block bg-white border border-gray-200 rounded-full px-6 py-2 shadow-sm">
-          <p className="text-sm font-medium text-[#475569]">
-            <span className="font-bold">3 major national public hospitals involved.</span> 10+ researchers.
+          <p className="body-text font-medium text-primary">
+            3 major national public hospitals involved. 10+ researchers.
           </p>
         </div>
       </div>
@@ -46,7 +46,7 @@ const ClinicalTrial = () => {
         {trialResults.map((card, index) => (
           <div 
             key={index} 
-            className="items-center text-center relative bg-white rounded-3xl p-10 border border-borderClr shadow-[0_1px_4px_rgba(12,12,13,0.05)] flex flex-col gap-5 overflow-hidden group"
+            className="items-center text-center relative bg-white rounded-3xl p-6 border border-borderClr shadow-[0_1px_4px_rgba(12,12,13,0.05)] flex flex-col gap-5 overflow-hidden group"
             style={{
               backgroundImage: `url(${smallChecker})`,
               backgroundSize: 'cover',
@@ -64,7 +64,7 @@ const ClinicalTrial = () => {
             </div>
 
             {/* Title Text */}
-            <h3 className="text-[#1e293b] text-lg font-bold leading-snug px-2 relative z-10">
+            <h3 className="body-text text-primary font-medium px-2 relative z-10">
               {card.title}
             </h3>
           </div>
@@ -74,8 +74,8 @@ const ClinicalTrial = () => {
       {/* Footer Banner */}
       <div className="bg-[#E0E7FF] bg-opacity-60 rounded-[32px] p-8 flex flex-col md:flex-row items-center justify-between border border-white">
         <div>
-          <h3 className="text-xl font-bold text-[#0F172A] mb-1">Ethics approved and Peer reviewed</h3>
-          <p className="text-[#475569] text-lg font-medium opacity-80">
+          <h3 className="heading-6 mb-3">Ethics approved and Peer reviewed</h3>
+          <p className="body-text opacity-80">
             View full clinical trial results and methodology
           </p>
         </div>

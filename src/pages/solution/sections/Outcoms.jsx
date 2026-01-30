@@ -25,10 +25,10 @@ const Outcoms = () => {
         <div className="max-w-[1176px] mx-auto text-center">
           {/* Header Content */}
           <div className="mb-16">
-            <h2 className="text-[48px] font-bold text-[#0F172A] leading-tight mb-6">
+            <h2 className="heading-2 mb-6">
               Achieve Outcomes Faster. No IT, No Delays.
             </h2>
-            <p className="text-[#64748B] text-xl">
+            <p className="body-text">
               Onboard your first patient in minutes
             </p>
           </div>
@@ -48,15 +48,15 @@ const Outcoms = () => {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white p-10 rounded-[24px] border border-gray-100 shadow-sm hover:shadow-md transition-shadow text-left"
+                  className="bg-white p-8 rounded-[24px] border border-gray-100 shadow-sm hover:shadow-md transition-shadow text-left"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <img src={checkLineFill} />
-                    <h3 className="text-xl font-bold text-[#1E293B]">
+                    <h3 className="body-text-heading">
                       {benefit.title}
                     </h3>
                   </div>
-                  <p className="text-[#64748B] text-lg leading-relaxed">
+                  <p className="body-text">
                     {benefit.description}
                   </p>
                 </div>
