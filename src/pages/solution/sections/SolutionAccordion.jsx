@@ -46,11 +46,11 @@ const SolutionAccordion = () => {
           backgroundPosition: "top center",
         }}
       >
-        <div className="w-3/5">
-          <h2 className="text-[36px] font-bold text-[#0F172A] leading-tight">
+        <div className="md:w-3/5 w-full">
+          <h2 className="heading-3 mb-6">
             CareAide – Health Engagement for Everyone
           </h2>
-          <p className="text-[#64748B] text-lg mb-10 leading-relaxed">
+          <p className="body-text mb-8">
             Provide health management tools and incentives for your entire
             population—a strategic perk that delivers multiple returns.
           </p>
@@ -60,8 +60,8 @@ const SolutionAccordion = () => {
             <div className="flex items-start gap-4">
               <MentalHealth />
               <div>
-                <h4 className="font-bold text-[#0F172A]">For</h4>
-                <p className="text-[#64748B]">
+                <h4 className=" body-text-heading mb-2">For</h4>
+                <p className="body-text-1">
                   Large population with diverse needs and backgrounds.
                 </p>
               </div>
@@ -69,8 +69,8 @@ const SolutionAccordion = () => {
             <div className="flex items-start gap-4">
               <Microscope />
               <div>
-                <h4 className="font-bold text-[#0F172A]">Use case</h4>
-                <p className="text-[#64748B]">
+               <h4 className="body-text-heading mb-2">Use case</h4>
+                <p className="body-text-1">
                   Health engagement, symptom reporting, family oversight, early
                   risk detection.
                 </p>
@@ -79,8 +79,8 @@ const SolutionAccordion = () => {
             <div className="flex items-start gap-4">
               <Heart />
               <div>
-                <h4 className="font-bold text-[#0F172A]">Outcomes</h4>
-                <p className="text-[#64748B]">
+               <h4 className="body-text-heading mb-2">Outcomes</h4>
+                <p className="body-text-1">
                   Chronic disease management, treatment compliance,
                   productivity, quality of life and cost containment.
                 </p>
@@ -90,7 +90,7 @@ const SolutionAccordion = () => {
         </div>
 
         {/* Mockup Area (Placeholder for images) */}
-        <div className="w-2/5">
+        <div className="md:w-2/5 w-full">
           <img
             src={CareAideImg}
             alt="CareAide App Interface"
@@ -101,7 +101,7 @@ const SolutionAccordion = () => {
 
       {/* Bottom Section: Accordion & App Links */}
       <div className="bg-bgclr rounded-[32px] py-8 px-10 border m-3 mt-0">
-        <h3 className="text-2xl font-bold text-[#0F172A] mb-5">
+        <h3 className="heading-6 mb-5">
           Key Capabilities
         </h3>
 
@@ -115,7 +115,7 @@ const SolutionAccordion = () => {
                 className="w-full flex justify-between items-center text-left group"
               >
                 <span
-                  className={`text-lg font-semibold transition-colors ${openAccordion === index ? "text-[#0F172A]" : "text-[#475569]"}`}
+                  className={`body-text font-semibold transition-colors ${openAccordion === index ? "text-[#0F172A]" : "text-[#475569]"}`}
                 >
                   {item.title}
                 </span>
@@ -123,7 +123,7 @@ const SolutionAccordion = () => {
               </button>
 
               {openAccordion === index && (
-                <div className="mt-4 text-[#64748B] text-lg leading-relaxed max-w-4xl animate-fadeIn">
+                <div className="mt-3 body-text max-w-4xl animate-fadeIn">
                   {item.content}
                 </div>
               )}
@@ -133,9 +133,9 @@ const SolutionAccordion = () => {
 
         {/* Download Section */}
         <div className="mt-6 border-t border-gray-100">
-          <p className="flex items-center text-xs font-bold text-gray-400 tracking-widest uppercase mb-6">
+          <p className="flex items-center font-medium body-text text-primary tracking-widest uppercase mb-6">
             Download{" "}
-            <span className="text-blue-500">
+            <span className="">
               <img src={careaideLogo} className="pr-1" />
             </span>{" "}
             App for Free

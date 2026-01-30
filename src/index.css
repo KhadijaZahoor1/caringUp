@@ -24,8 +24,20 @@
     @apply text-[32px] font-medium leading-10 font-heading text-primary;
   }
 
+  .heading-6 {
+    @apply text-[22px] font-medium leading-5 font-heading text-primary;
+  }
+
   .body-text {
     @apply text-base font-normal font-body text-secondary;
+  }
+
+  .body-text-heading {
+    @apply text-lg font-semibold font-heading text-primary;
+  }
+
+  .body-text-1 {
+    @apply text-sm font-normal font-body text-secondary;
   }
   
   .button-text{
@@ -46,6 +58,9 @@
       @apply text-[24px] leading-8;
     }
 
+    .heading-6 {
+    @apply text-lg font-medium font-heading text-primary;
+  }
     .body-text {
       @apply text-sm;
     }

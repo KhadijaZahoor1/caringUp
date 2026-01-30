@@ -119,8 +119,9 @@ const Solution = () => {
           text={
             "Discover how CaringUp delivers measurable improvements for your specific organization—whether you run a hospital network, insure millions, or manage national health programs."
           }
+          textClassName="w-full"
         />
-        <div className="flex flex-col items-center gap-6 py-20">
+        <div className="max-w-[1176px] mx-auto flex flex-col items-center gap-6 md:pt-20 md:pb-[120px] pt-20 pb-0">
           {cardData.map((data, index) => (
             <SolutionCard key={index} {...data} />
           ))}

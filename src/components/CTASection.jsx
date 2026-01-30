@@ -48,7 +48,7 @@ const CTASection = ({
           )}
 
           {(primaryBtn || secondaryBtn) && (
-            <div className="flex items-center gap-4 pt-16">
+            <div className="flex items-center md:flex-row flex-col gap-4 pt-16">
               {primaryBtn && (
                 <CustomButton 
                   variant="secondary" 

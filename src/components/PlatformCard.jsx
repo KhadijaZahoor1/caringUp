@@ -5,7 +5,7 @@ import CurveArrowRight from "../assets/svg/CurveArrowRight";
 const PlatformCard = ({ card }) => {
   return (
     <div
-      className="relative bg-white rounded-3xl p-10 border border-borderClr shadow-[0_1px_4px_rgba(12,12,13,0.05)] flex flex-col gap-5 overflow-hidden group"
+      className="relative bg-white rounded-3xl p-8 border border-borderClr shadow-[0_1px_4px_rgba(12,12,13,0.05)] flex flex-col gap-6 overflow-hidden group"
       style={{
         backgroundImage: `url(${smallChecker})`,
         backgroundSize: "cover",
@@ -24,16 +24,16 @@ const PlatformCard = ({ card }) => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col h-full">
-        <h3 className="text-[22px] font-bold text-[#1e293b] leading-tight mb-3">
+        <h3 className="heading-6 mb-3">
           {card.title}
         </h3>
-        <p className="text-[#64748b] text-[16px] leading-relaxed mb-6 flex-grow">
+        <p className="body-text-1 mb-10 flex-grow">
           {card.desc}
         </p>
 
         {/* Action Button */}
         {card.linkText && (
-          <button className="flex items-center gap-1 text-[#4f46e5] font-bold text-sm hover:gap-2 transition-all">
+          <button className="flex items-center gap-1 body-text-1 text-[#1B447D] font-medium">
             {card.linkText}
            <CurveArrowRight />
           </button>

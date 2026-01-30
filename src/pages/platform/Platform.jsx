@@ -26,6 +26,7 @@ const Platform = () => {
           heading={"One Platform, Two Ways to Deliver Value."}
           subHeading={"PRODUCTS"}
           text={`Start with broad health engagement, targeted clinical intervention, or both. Our flexible platform adapts to your immediate needs and grows with your programs.`}
+          textClassName="max-w-[605px]"
         />
         <SolutionAccordion />
         <IntegratedPlatform />

@@ -46,7 +46,7 @@ const Hero = ({
 
           {/* Conditional Button Container */}
           {(primaryBtn || secondaryBtn) && (
-            <div className="flex items-center gap-4">
+            <div className="flex items-center md:flex-row flex-col gap-4">
               {primaryBtn && (
                 <CustomButton 
                   variant="secondary" 

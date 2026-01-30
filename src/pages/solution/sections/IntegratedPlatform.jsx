@@ -36,7 +36,7 @@ const IntegratedPlatform = () => {
         className="relative flex rounded-[32px] px-10 pb-0 py-9 gap-5"
       >
           {/* Left Side: Laptop Mockup Area */}
-          <div className="w-1/2">
+          <div className="md:w-1/2 w-full">
               <img
                 src={integratedPlatform}
                 alt="CareAide App Interface"
@@ -45,11 +45,11 @@ const IntegratedPlatform = () => {
             </div>
 
           {/* Right Side Content */}
-          <div className="w-1/2 mt-1">
-            <h2 className="text-[36px] font-bold text-[#0F172A] leading-tight mb-6">
+          <div className="md:w-1/2 w-full mt-1">
+            <h2 className="heading-3 mb-8">
               Integrated Platform – Clinical Intervention When Needed
             </h2>
-            <p className="text-[#64748B] text-lg mb-10 leading-relaxed">
+            <p className="body-text mb-8">
               Care Management & Targeted Monitoring to improve treatment
               efficacy — deployable in minutes, not weeks.
             </p>
@@ -59,10 +59,10 @@ const IntegratedPlatform = () => {
                 <div key={index} className="flex items-start gap-4">
                   {point.icon}
                   <div>
-                    <h4 className="font-bold text-[#0F172A] text-lg">
+                    <h4 className="body-text-heading mb-2">
                       {point.label}
                     </h4>
-                    <p className="text-[#64748B] text-md leading-relaxed">
+                    <p className="body-text-1">
                       {point.text}
                     </p>
                   </div>
@@ -80,10 +80,10 @@ const IntegratedPlatform = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold text-[#0F172A] mb-1">
+            <h3 className="heading-6 mb-3">
               The Seamless Upgrade Path
             </h3>
-            <p className="text-[#475569] text-lg">
+            <p className="body-text">
               Patients already using CareAide can be enrolled into clinical
               monitoring seamlessly — maximizing adoption and lowering
               acquisition cost.

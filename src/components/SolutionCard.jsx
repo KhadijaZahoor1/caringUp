@@ -13,8 +13,7 @@ const SolutionCard = ({
 }) => {
   return (
     <div
-      className="bg-white flex flex-col relative overflow-hidden py-10 px-12 border shadow-[0_1px_4px_rgba(12,12,13,0.05)] rounded-[32px]"
-      style={{ width: "1176px" }}
+      className="bg-white w-full flex flex-col relative overflow-hidden md:py-10 md:px-12 px-5 py-6 border shadow-[0_1px_4px_rgba(12,12,13,0.05)] rounded-[32px]"
     >
       {/* Top Icon Area */}
       <div className="mb-8">
@@ -24,18 +23,18 @@ const SolutionCard = ({
       </div>
 
       {/* Badge */}
-      <div className="mb-6">
-        <span className="bg-[#E8F7F0] text-[#2D8A5B] py-2 px-3 rounded-[10px] text-sm font-medium">
+      <div className="mb-5">
+        <span className="bg-[#E8F7F0] text-[#2D8A5B] py-2 px-3 rounded-[10px] body-text font-medium">
           {badgeText}
         </span>
       </div>
 
       {/* Header Text */}
-      <h1 className="text-[40px] font-bold text-[#1a1a1a] leading-tight mb-4 max-w-4xl">
+      <h1 className="heading-3 mb-3">
         {title}
       </h1>
 
-      <p className="text-[#6B7280] text-xl mb-10">{description}</p>
+      <p className="body-text mb-8">{description}</p>
 
       {/* Features List */}
       <div className="space-y-5 flex-grow">
@@ -44,8 +43,8 @@ const SolutionCard = ({
             <div className="mt-1 flex-shrink-0">
             {  <img src={checkLine} alt="checkline" className="object-contain" />}
             </div>
-            <p className="text-[#374151] text-lg leading-relaxed">
-              <span className="font-bold">{feature.title}</span>{" "}
+            <p className="body-text text-primary">
+              <span className="font-medium body-text text-primary">{feature.title}</span>{" "}
               {feature.description}
             </p>
           </div>

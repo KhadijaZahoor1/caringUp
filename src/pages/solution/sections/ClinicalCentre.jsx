@@ -66,10 +66,10 @@ const ClinicalCentre = () => {
 
       {/* Header */}
       <div className="text-center mb-16">
-        <h2 className="text-[44px] font-bold text-[#0F172A] mb-6">
+        <h2 className="heading-2 mb-6">
           WeCare: The Clinical Command Centre
         </h2>
-        <p className="text-[#64748B] text-lg">
+        <p className="body-text text-[18px] leading-8">
           Enterprise-grade Multi-stakeholder Monitoring for Every Care Model
         </p>
       </div>
