@@ -22,7 +22,7 @@ const trialResults  = [
 
 const ClinicalTrial = () => {
   return (
-    <div className="my-[120px] mx-3 py-[100px] rounded-[64px] bg-white">
+    <div className="md:my-[120px] my-20 md:mx-3 py-[100px] rounded-[32px] md:rounded-[64px] bg-white">
       <div className='max-w-[1176px] mx-auto'>
       {/* Header Area */}
       <div className="text-center">
@@ -34,15 +34,15 @@ const ClinicalTrial = () => {
         </p>
         
         {/* Participants Badge */}
-        <div className="inline-block bg-white border border-gray-200 rounded-full px-6 py-2 shadow-sm">
-          <p className="body-text font-medium text-primary">
+        <div className="inline-block bg-white border border-gray-200 rounded-full md:px-6 px-3 py-2 shadow-sm">
+          <p className="md:text-base text-xs font-body font-medium text-primary">
             3 major national public hospitals involved. 10+ researchers.
           </p>
         </div>
       </div>
 
       {/* Results Grid */}
-     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-16">
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-16 md:px-0 px-5">
         {trialResults.map((card, index) => (
           <div 
             key={index} 
@@ -72,10 +72,10 @@ const ClinicalTrial = () => {
       </div>
 
       {/* Footer Banner */}
-      <div className="bg-[#E0E7FF] bg-opacity-60 rounded-[32px] p-8 flex flex-col md:flex-row items-center justify-between border border-white">
+      <div className="bg-[#E0E7FF] bg-opacity-60 rounded-[32px] md:p-8 p-5 flex flex-col md:flex-row items-center justify-between border border-white">
         <div>
-          <h3 className="heading-6 mb-3">Ethics approved and Peer reviewed</h3>
-          <p className="body-text opacity-80">
+          <h3 className="heading-6 md:mb-3 mb-1">Ethics approved and Peer reviewed</h3>
+          <p className="body-text opacity-80 md:mb-0 mb-2">
             View full clinical trial results and methodology
           </p>
         </div>

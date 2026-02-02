@@ -39,7 +39,7 @@ const SolutionAccordion = () => {
   return (
     <div className="mt-20 max-w-[1176px] mx-auto rounded-[32px] border bg-white">
       <div
-        className="flex relative px-6 py-9 pb-0 rounded-[32px]"
+        className="flex md:flex-row flex-col relative md:px-6 px-5 py-9 pb-0 rounded-[32px]"
         style={{
           backgroundImage: `url(${careAideBg})`,
           backgroundSize: "cover",
@@ -94,13 +94,13 @@ const SolutionAccordion = () => {
           <img
             src={CareAideImg}
             alt="CareAide App Interface"
-            className="w-full max-w-[550px] object-contain"
+            className="w-full max-w-[550px] object-contain md:py-0 py-6"
           />
         </div>
       </div>
 
       {/* Bottom Section: Accordion & App Links */}
-      <div className="bg-bgclr rounded-[32px] py-8 px-10 border m-3 mt-0">
+      <div className="bg-bgclr rounded-[32px] md:py-8 md:px-10 p-5 border m-3 mt-0">
         <h3 className="heading-6 mb-5">
           Key Capabilities
         </h3>
@@ -133,7 +133,7 @@ const SolutionAccordion = () => {
 
         {/* Download Section */}
         <div className="mt-6 border-t border-gray-100">
-          <p className="flex items-center font-medium body-text text-primary tracking-widest uppercase mb-6">
+          <p className="flex flex-row items-center font-medium body-text text-primary tracking-widest uppercase mb-6">
             Download{" "}
             <span className="">
               <img src={careaideLogo} className="pr-1" />
@@ -142,7 +142,7 @@ const SolutionAccordion = () => {
           </p>
           <div className="flex gap-4">
             <div className="">
-              <img src={appstore} />
+              <img src={appstore} className="" />
             </div>
           </div>
         </div>

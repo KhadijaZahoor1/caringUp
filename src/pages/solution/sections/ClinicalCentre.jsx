@@ -61,8 +61,8 @@ const stakeholderCards = [
 const ClinicalCentre = () => {
     const [openCapability, setOpenCapability] = useState(0);
   return (
-    <div className='py-[120px]'>
-    <div className="mx-3 py-[120px] rounded-[64px] bg-white">
+    <div className='md:py-[120px] py-20'>
+    <div className=" md:py-[120px] md:mx-3 py-20 rounded-[32px] md:rounded-[64px] bg-white">
 
       {/* Header */}
       <div className="text-center mb-16">
@@ -77,14 +77,14 @@ const ClinicalCentre = () => {
       {/* Stakeholder Cards Grid */}
       <div className="max-w-[1176px] mx-auto ">
       {/* Top Row: 2 Columns */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 md:px-0 px-5">
         {stakeholderCards.slice(0, 2).map((card, index) => (
           <PlatformCard key={index} card={card} />
         ))}
       </div>
 
       {/* Bottom Row: 3 Columns */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:px-0 px-5">
         {stakeholderCards.slice(2, 5).map((card, index) => (
           <PlatformCard key={index} card={card} />
         ))}
@@ -92,7 +92,7 @@ const ClinicalCentre = () => {
     </div>
 
       {/* Capabilities Section */}
-      <div className="bg-white rounded-3xl border border-borderClr max-w-[1176px] mx-auto my-16 shadow-[0_1px_4px_rgba(12,12,13,0.05)] py-8 px-10">
+      <div className="bg-white rounded-3xl border border-borderClr max-w-[1176px] mx-auto my-16 shadow-[0_1px_4px_rgba(12,12,13,0.05)] py-8 md:px-10 px-5">
         <h3 className="heading-6 mb-8">Key Capabilities</h3>
         <div className="divide-y divide-borderClr">
           {capabilities.map((cap, index) => (
@@ -117,7 +117,7 @@ const ClinicalCentre = () => {
       </div>
 
       {/* Bottom Action Button */}
-      <div className="flex justify-center mb-[100px]">
+      <div className="flex justify-center">
        <CustomButton  variant="primary"
         label="Request a Demo" />
       </div>

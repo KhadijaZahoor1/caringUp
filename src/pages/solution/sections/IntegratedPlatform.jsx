@@ -26,14 +26,14 @@ const infoPoints = [
 
 const IntegratedPlatform = () => {
   return (
-    <div className="mt-20 mb-[120px] max-w-[1176px] mx-auto rounded-[32px] border bg-white">
+    <div className="mt-20 md:mb-[120px] mb-20 max-w-[1176px] mx-auto rounded-[32px] border bg-white">
       <div
         style={{
           backgroundImage: `url(${careAideBg})`,
           backgroundSize: "cover",
           backgroundPosition: "top center",
         }}
-        className="relative flex rounded-[32px] px-10 pb-0 py-9 gap-5"
+        className="relative flex flex-col md:flex-row rounded-[32px] md:px-10 px-5 pb-0 py-9 md:gap-5"
       >
           {/* Left Side: Laptop Mockup Area */}
           <div className="md:w-1/2 w-full">
@@ -74,13 +74,13 @@ const IntegratedPlatform = () => {
      
       {/* Bottom Highlight: Seamless Upgrade Path */}
       <div className="m-3 mt-12">
-        <div className="rounded-[24px] p-8 flex items-center gap-6 bg-[#E0E7FF]">
-          <div className="">
-           <img src={bulb} />
+        <div className="rounded-[24px] md:p-8 p-5 flex md:items-center items-start md:gap-6 gap-2 bg-[#E0E7FF]">
+          <div className="md:pt-0 pt-3">
+           <img src={bulb} className="md:w-full md:h-auto w-36 h-10" />
           </div>
 
           <div>
-            <h3 className="heading-6 mb-3">
+            <h3 className="heading-6 md:mb-3 mb-1">
               The Seamless Upgrade Path
             </h3>
             <p className="body-text">

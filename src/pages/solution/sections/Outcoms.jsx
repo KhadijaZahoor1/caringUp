@@ -21,10 +21,10 @@ const benefits = [
 
 const Outcoms = () => {
   return (
-      <div className="pt-[120px] mb-32 px-28">
+      <div className="md:pt-[120px] pt-20 mb-32 md:px-28 px-5">
         <div className="max-w-[1176px] mx-auto text-center">
           {/* Header Content */}
-          <div className="mb-16">
+          <div className="md:mb-16 mb-6">
             <h2 className="heading-2 mb-6">
               Achieve Outcomes Faster. No IT, No Delays.
             </h2>
