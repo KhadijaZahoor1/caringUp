@@ -1,5 +1,7 @@
 import React from "react";
 import CustomButton from "./Button";
+import circleCheck from "../assets/icons/checkbox-circle-fill.png";
+import lineConnector from "../assets/images/line.png";
 
 const PayerValueSection = () => {
   const values = [
@@ -21,59 +23,50 @@ const PayerValueSection = () => {
   ];
 
   return (
-    /* Outer Container: 1440px Width x 842px Height (Hug) */
-    <section className="w-full bg-[#F8FBFF] flex items-center justify-center min-h-[842px]  overflow-hidden">
-      {/* Inner Content Wrapper: Center Aligned */}
-      <div className="w-full max-w-[1416px] flex flex-col items-center px-8 lg:px-[120px]">
-        {/* Header Block */}
-        <div className="text-center mb-[64px] w-full">
-          <h2 className="text-[48px] font-bold text-[#1A1A1A] mb-[24px] tracking-tight leading-[1.1]">
+    <section className="">
+      <div className="w-full max-w-[1176px] mx-auto flex flex-col items-center px-5 md:px-0 md:pt-[120px] md:pb-60 py-20">
+        <div className="text-center w-full">
+          <h2 className="heading-2 mb-6">
             Demonstrate Superior Value to Payers
           </h2>
-          {/* Updated: Removed max-width to ensure one-line display */}
-          <p className="text-[#64748B] text-[18px] font-medium leading-relaxed whitespace-nowrap">
+
+          <p className="body-text">
             Show measurable clinical improvements and lower utilization to
             secure stronger partnerships with insurers
           </p>
         </div>
 
-        {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px] w-full mb-[64px]">
-          {values.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-[32px] p-[40px] flex flex-col gap-[20px] shadow-sm border border-[#F1F5F9] transition-all hover:shadow-md h-full"
-            >
-              <div className="w-[28px] h-[28px] rounded-full bg-[#10B981] flex items-center justify-center shrink-0">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </div>
+        <div className="relative top-28">
+          <div className="absolute -top-12 left-0 w-full hidden md:block pointer-events-none">
+            <img
+              src={lineConnector}
+              alt="connector"
+              className=" mx-auto object-contain"
+            />
+          </div>
 
-              <div className="flex flex-col gap-[12px]">
-                <h3 className="text-[22px] font-bold text-[#1A1A1A] leading-tight tracking-tight">
-                  {item.title}
-                </h3>
-                <p className="text-[#64748B] text-[15.5px] leading-relaxed">
-                  {item.description}
-                </p>
+          {/* 3-Column Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+            {values.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-[32px] md:p-8 p-5 border border-borderClr"
+              >
+                <img src={circleCheck} alt="connector" className="w-8 h-8" />
+
+                <h3 className="body-text-heading pt-6 pb-3">{item.title}</h3>
+                <p className="body-text">{item.description}</p>
               </div>
+            ))}
+          </div>
+
+          <div className="text-center pt-16 md:mb-0 mb-20">
+              <CustomButton
+                variant="primary"
+                label={"View Clinical Trial Results"}
+              />
             </div>
-          ))}
         </div>
-
-        {/* Action Button */}
-
-        <CustomButton variant="primary" label={"View Clinical Trial Results"} />
       </div>
     </section>
   );

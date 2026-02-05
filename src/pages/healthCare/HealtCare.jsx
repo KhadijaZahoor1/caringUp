@@ -7,6 +7,9 @@ import PayerValueSection from "../../components/PayerValueSection";
 import OutcomesSection from "../../components/OutcomesSection 1";
 import PatientExperienceSection from "../../components/PatientExperienceSection 1";
 import DiseaseManagementSection from "../../components/DiseaseManagementSection 1";
+import healthIcon1 from '../../assets/icons/healthIcon1.png'
+import healthIcon2 from '../../assets/icons/healthIcon2.png'
+import healthIcon3 from '../../assets/icons/healthIcon3.png'
  
 const HealthCare = () => {
   const outcomes = [
@@ -35,16 +38,19 @@ const HealthCare = () => {
   const experiences = [
     {
       title: "Proactive Care for Peace of Mind",
+      icon: healthIcon1,
       description:
         "Conducted across multiple hospitals and care settings, the trial evaluated RPM effectiveness with a diverse patient population—ensuring high external validity and strong clinical confidence.",
     },
     {
       title: "Always-On Accessibility",
+      icon: healthIcon2,
       description:
         "Patients supported by the RPM program achieved >95% PDC (Proportion of Days Covered), compared to just 68% in the control group—demonstrating long-term behavioral change.",
     },
     {
       title: "Contextual Engagement Builds Trust",
+      icon: healthIcon3,
       description:
         "Participants with heart failure saw a significant increase in EF% from baseline, reflecting improved cardiac function and measurable clinical recovery driven by early intervention.",
     },
@@ -85,12 +91,11 @@ Programs`;
       <Container>
         <Header />
         <Hero
-          title={`Healthcare\n Challenges, Perfectly\nMatched`}
-          description="Combat the rising burden of NCDs, HIV, and TB with integrated Health & Care Management solution — purpose-built for resource-constrained healthcare ecosystems and adaptable to any organization’s role in care.."
+          title={`Drive Better Outcomes, Forge Lifelong Loyalty`}
+          description="Transform one-time treatments into lasting patient relationships with a platform clinically proven to improve outcomes, satisfaction, and long-term retention."
            primaryBtn={{ label: "Discover the Platform" }}
             secondaryBtn={{ label: "Request a Demo" }}
         />
-        {/* <OutcomesSection /> */}
         <OutcomesSection
           tagLine="For Healthcare Providers"
           heading="Proven Patient Outcomes"
@@ -98,8 +103,6 @@ Programs`;
           outcomes={outcomes}
           primaryButtonText="View Clinical Trial Results"
           secondaryButtonText="Request a Demo"
-          onPrimaryClick={() => console.log("Primary clicked")}
-          onSecondaryClick={() => console.log("Secondary clicked")}
         />
  
         {/* <PatientExperienceSection /> */}
@@ -115,7 +118,6 @@ Programs`;
           description="Run high-impact programs at scale — without increasing clinical workload"
           buttonText="View Clinical Trial Results"
           points={points}
-          onButtonClick={() => console.log("CTA clicked")}
         />
         <PayerValueSection />
         <Footer />

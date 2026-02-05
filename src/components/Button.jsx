@@ -26,6 +26,11 @@ const CustomButton = ({
       icon: "bg-transparent text-white border-borderClr border-2",
       hasBorder: true,
     },
+    fourth: {
+      label: "bg-transparent text-primary border-primary border-2",
+      icon: "bg-transparent text-primary border-primary border-2",
+      hasBorder: true,
+    },
   };
 
   const selected = variantStyles[variant];

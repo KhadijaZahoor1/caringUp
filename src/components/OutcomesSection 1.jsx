@@ -13,31 +13,31 @@ const OutcomesSection = ({
   onSecondaryClick,
 }) => {
   return (
-    <section className="w-full bg-[#f8fbff] flex justify-center py-[100px]">
-      <div className="w-full max-w-[1440px] px-[132px] flex flex-col items-center">
+    <section className="w-full flex justify-center py-20 md:py-[120px]">
+      <div className="w-full max-w-[1440px] mx-auto px-5 md:px-0 flex flex-col items-center justify-center">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center">
           {tagLine && (
-            <span className="text-[12px] font-bold text-[#8e9aaf] uppercase tracking-[0.2em] block mb-4">
+            <span className="body-text font-medium text-primary">
               {tagLine}
             </span>
           )}
 
           {heading && (
-            <h2 className="text-[48px] font-bold text-slate-900 mb-6 tracking-tight">
+            <h2 className="heading-2 py-6">
               {heading}
             </h2>
           )}
 
           {subHeading && (
-            <p className="text-[#64748b] text-[16px] font-medium italic">
+            <p className="body-text">
               {subHeading}
             </p>
           )}
-        </div>
-
+       
+</div>
         {/* Outcomes Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[1176px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[1176px] py-16">
           {outcomes.map((item, index) => (
             <OutcomeCard
               key={index}
@@ -49,13 +49,13 @@ const OutcomesSection = ({
 
         {/* Action Buttons */}
         {(primaryButtonText || secondaryButtonText) && (
-          <div className="flex items-center gap-4 mt-16">
+          <div className="flex items-center md:flex-row flex-col gap-4">
             {primaryButtonText && (
              <CustomButton variant="primary" label={primaryButtonText} />
             )}
 
             {secondaryButtonText && (
-               <CustomButton variant="tertiary" label={secondaryButtonText} />
+               <CustomButton variant="fourth" label={secondaryButtonText} />
             )}
           </div>
         )}
@@ -65,3 +65,8 @@ const OutcomesSection = ({
 };
 
 export default OutcomesSection;
+
+
+  // <button className=" px-4 py-3 rounded-full body-text text-primary border border-borderClr">
+  //         Become a Care Partner
+  //       </button>

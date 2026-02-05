@@ -1,40 +1,29 @@
 import React from "react";
 import CustomButton from "./Button";
+import checkLineCircle from '../assets/icons/checkbox-circle-fill.png'
+import homeCardChecker from '../assets/images/card.png'
 
 const ManagementCard = ({ title, description }) => (
-  /* Exact dimensions: Right column width is 757px */
-  <div className="bg-white rounded-[32px] p-10 flex flex-col gap-4 shadow-sm border border-[#F1F5F9] relative overflow-hidden w-full max-w-[757px]">
+  
+  <div className="bg-white rounded-[32px] md:p-8 p-5 flex flex-col gap-4  border border-borderClr relative overflow-hidden w-full max-w-[757px]"
+   style={{
+        backgroundImage: `url(${homeCardChecker})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "top right",
+      }}
+  >
 
-    <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
-      <div className="grid grid-cols-6 gap-2">
-        {[...Array(30)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 bg-slate-400 rounded-full" />
-        ))}
-      </div>
-    </div>
-
-    <div className="flex items-center gap-4 relative z-10">
-      <div className="w-[26px] h-[26px] rounded-full bg-[#10b981] flex items-center justify-center shrink-0">
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="white"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-      </div>
-      <h3 className="text-[22px] font-bold text-[#1A1A1A] tracking-tight">
+    <div className="flex items-start flex-col relative z-10">
+     <img src={checkLineCircle} />
+      <h3 className="heading-6 pt-6 pb-4">
         {title}
       </h3>
-    </div>
-    <p className="text-[#64748b] text-[16.5px] leading-[1.6] ml-11 relative z-10">
+    <p className="body-text relative z-10">
       {description}
     </p>
+    </div>
+    
   </div>
 );
 
@@ -46,19 +35,19 @@ const DiseaseManagementSection = ({
   points = [],
 }) => {
   return (
-    <section className="w-full bg-[#f8fbff] flex justify-center items-center min-h-[1144px] py-[100px]">
-      <div className="w-full max-w-[1416px] px-8 lg:px-[120px] flex flex-row justify-between items-start gap-[60px]">
+    <section className="w-full flex justify-center items-center min-h-[1144px] py-20 md:py-[120px]">
+      <div className="w-full max-w-[1416px] px-8 lg:px-[120px] flex md:flex-row flex-col justify-between items-start gap-24">
         {/* LEFT COLUMN */}
-        <div className="w-[315px] shrink-0 flex flex-col">
+        <div className="md:w-[25%] w-full shrink-0 flex flex-col">
           {title && (
-            <h2 className="text-[56px] font-bold text-[#1A1A1A] leading-[62px] tracking-[-0.03em] mb-10 whitespace-pre-line">
+            <h2 className="heading-2 mb-6">
               {title}
             </h2>
           )}
 
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-16">
             {description && (
-              <p className="text-[#64748b] text-[18px] leading-[28px]">
+              <p className="body-text">
                 {description}
               </p>
             )}
@@ -71,7 +60,7 @@ const DiseaseManagementSection = ({
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="w-[757px] flex flex-col gap-6">
+        <div className="md:w-[75%] w-full flex flex-col gap-6">
           {points.map((p, i) => (
             <ManagementCard key={i} {...p} />
           ))}
