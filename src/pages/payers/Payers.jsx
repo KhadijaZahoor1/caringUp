@@ -7,7 +7,13 @@ import CTASection from "../../components/CTASection";
 import Flywheel from "../../components/Flywheel";
 import DiseaseManagementSection from "../../components/DiseaseManagementSection 1";
 import PatientExperienceSection from "../../components/PatientExperienceSection 1";
-import OutcomesSection from "../../components/OutcomesSection 1";
+import PayersOutcomes from "./sections/PayersOutcomes";
+import healthIcon1 from '../../assets/icons/healthIcon1.png'
+import portfolio from '../../assets/icons/portfolio.png'
+import segmentation from '../../assets/icons/segmentation.png'
+import cost from '../../assets/icons/costIcon.png'
+import dollar from '../../assets/icons/DollarIcon.png'
+import visible from '../../assets/icons/visibility.png'
  
 const Payers = () => {
   const outcomes = [
@@ -36,16 +42,19 @@ const Payers = () => {
   const experiences = [
     {
       title: "Portfolio-Level Visibility",
+      icon: portfolio,
       description:
         "Monitor rising-risk segments and employer-group trends in real time.",
     },
     {
       title: "Segmentation for Targeted Oversight",
+      icon: segmentation,
       description:
         "Segment by plan, condition, or employer to detect early deterioration and manage high-utilization groups proactively.",
     },
     {
       title: "Patient-Level Risk Flags",
+      icon: healthIcon1,
       description:
         "AI-assisted indicators surface non-adherence, treatment gaps, and hospitalization risk for timely action.",
     },
@@ -54,16 +63,19 @@ const Payers = () => {
   const totalRisks = [
     {
       title: "Unified Visibility & Control",
+       icon: visible,
       description:
         "Gain a single, actionable view of risk and performance across all member groups—from corporate clients to national schemes—enabling consistent, data-driven decisions.",
     },
     {
       title: "Frictionless Program Expansion",
+       icon: cost,
       description:
         "Launch new chronic care programs in days, not months — no integrations, no IT friction.",
     },
     {
       title: "Predictable Financial Outcomes",
+       icon: dollar,
       description:
         "Consistent oversight produces stable adherence, reduced deterioration, and a more manageable loss ratio.",
     },
@@ -102,20 +114,18 @@ Events`;
       <Container>
         <Header />
         <Hero
-          title={`Active Disease and\nRisk Management. At\nScale`}
-          description="Continuous management of chronic and complex conditions—powered by a dynamic remote monitoring platform designed for resource-constrained healthcare ecosystems."
-          buttonText="Schedule a Demo"
+          title={`Predict Risk. Reduce Claims. Ensure Sustainability.`}
+          description="Move from retrospective claims management to proactive risk interception. CaringUp equips your teams with dynamic monitoring tools and portfolio-level insights that reduce avoidable costs and support sustainable profitability."
+          primaryBtn={{ label: "Discover the Platform" }}
+          secondaryBtn={{ label: "Request an ROI Analysis" }}
         />
-        <OutcomesSection
-          tagLine="FOR PAYERS"
+        <PayersOutcomes
+        tagLine="FOR PAYERS"
           heading="Clinically Proven, Data Driven Cost Containment"
           subHeading="Lower the Baseline and Flatten the Cost Curve of Chronic Care"
           outcomes={outcomes}
           primaryButtonText="View Clinical Trial Results"
-          secondaryButtonText="Request a Demo"
-          onPrimaryClick={() => console.log("Primary clicked")}
-          onSecondaryClick={() => console.log("Secondary clicked")}
-        />
+           />
         {/* <PatientExperienceSection /> */}
         <PatientExperienceSection
           heading="The Intelligence Layer for Proactive
@@ -129,7 +139,7 @@ Events`;
           title={title}
           description="Convert risk intelligence into timely, targeted interventions"
           points={points}
-          onButtonClick={() => console.log("CTA clicked")}
+          showPayersSection
         />
  
         {/* <PatientExperienceSection /> */}
@@ -143,7 +153,7 @@ Events`;
         <CTASection
           title={`Ready to Improve Your Loss Ratio—\nSustainably?`}
           description="Partner with CaringUp to reduce preventable claims and create long-term cost stability"
-          buttonText="Schedule a Strategy Session"
+          primaryBtn={{ label: "Schedule a Strategy Session" }}
         />
         <Footer />
       </Container>

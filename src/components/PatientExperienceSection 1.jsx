@@ -12,7 +12,7 @@ const ExperienceCard = ({ icon, title, description }) => (
       />
     </div>
 
-    <div className="flex flex-col">
+    <div className="flex flex-col text-left">
       <h3 className="heading-6">
         {title}
       </h3>
@@ -29,15 +29,15 @@ const PatientExperienceSection = ({
   experiences = [],
 }) => {
   return (
-    <section className="md:my-24 my-0 bg-white rounded-[32px] md:rounded-[64px]">
-      <div className="flex flex-col items-center justify-center w-full max-w-[1224px] mx-auto px-5 md:px-0 py-20 md:py-[100px]">
+    <section className="md:my-[120px] my-0 bg-white rounded-[32px] md:rounded-[64px]">
+      <div className="flex flex-col items-center justify-center text-center w-full max-w-[1224px] mx-auto px-5 md:px-0 py-20 md:py-[100px]">
         
           {heading && <h2 className="heading-2 mb-6">{heading}</h2>}
 
           {subHeading && <p className="body-text">{subHeading}</p>}
        
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-[1280px] mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-16">
           {experiences.map((exp, index) => (
             <ExperienceCard
               key={index}

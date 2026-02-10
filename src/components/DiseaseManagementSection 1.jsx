@@ -2,10 +2,11 @@ import React from "react";
 import CustomButton from "./Button";
 import checkLineCircle from '../assets/icons/checkbox-circle-fill.png'
 import homeCardChecker from '../assets/images/card.png'
+import bulb from '../assets/icons/stack.png'
 
 const ManagementCard = ({ title, description }) => (
   
-  <div className="bg-white rounded-[32px] md:p-8 p-5 flex flex-col gap-4  border border-borderClr relative overflow-hidden w-full max-w-[757px]"
+  <div className="bg-white rounded-[32px] md:p-8 p-5 flex flex-col gap-4  border border-borderClr relative overflow-hidden w-full"
    style={{
         backgroundImage: `url(${homeCardChecker})`,
         backgroundSize: "cover",
@@ -33,6 +34,7 @@ const DiseaseManagementSection = ({
   buttonText,
   onButtonClick,
   points = [],
+  showPayersSection = false,
 }) => {
   return (
     <section className="w-full flex justify-center items-center min-h-[1144px] py-20 md:py-[120px]">
@@ -61,6 +63,25 @@ const DiseaseManagementSection = ({
 
         {/* RIGHT COLUMN */}
         <div className="md:w-[75%] w-full flex flex-col gap-6">
+
+         
+        {showPayersSection && (
+          <div className="rounded-[24px] md:p-8 p-5 flex md:items-center items-start md:gap-6 gap-2 bg-[#E0E7FF]">
+          <div className="">
+           <img src={bulb} className="hidden md:block" />
+          </div>
+
+          <div>
+            <h3 className="heading-6 md:mb-3 mb-1">
+             From Early Warning to Effective Management
+            </h3>
+            <p className="body-text">
+             Our platform provides the tools—whether used by your team or your clinical and claims admin partners—to intercept deterioration early and manage it effectively.
+            </p>
+          </div>
+        </div>
+        )}
+     
           {points.map((p, i) => (
             <ManagementCard key={i} {...p} />
           ))}
