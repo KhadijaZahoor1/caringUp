@@ -9,6 +9,7 @@ import TitleSection from "../../components/TitleSection";
 import icon1 from '../../assets/icons/solutionIcon1.png'
 import icon2 from '../../assets/icons/solutionIcon2.png'
 import icon3 from '../../assets/icons/solutionIcon3.png'
+import solutionBanner from "../../assets/images/solutionBanner.png";
 
 
 const cardData = [
@@ -112,6 +113,8 @@ const Solution = () => {
           description="Combat the rising burden of NCDs, HIV, and TB with integrated Health & Care Management solution — purpose-built for resource-constrained healthcare ecosystems and adaptable to any organization’s role in care."
            primaryBtn={{ label: "See Platform Capabilities" }}
            secondaryBtn={{ label: "Contact Sales" }}
+           backgroundImage={solutionBanner}
+           container
         />
         <TitleSection
           heading={"Select Your Path to Better Outcomes"}

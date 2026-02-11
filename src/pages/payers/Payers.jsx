@@ -14,6 +14,7 @@ import segmentation from '../../assets/icons/segmentation.png'
 import cost from '../../assets/icons/costIcon.png'
 import dollar from '../../assets/icons/DollarIcon.png'
 import visible from '../../assets/icons/visibility.png'
+import payersBanner from "../../assets/images/payersBanner.png";
  
 const Payers = () => {
   const outcomes = [
@@ -118,6 +119,7 @@ Events`;
           description="Move from retrospective claims management to proactive risk interception. CaringUp equips your teams with dynamic monitoring tools and portfolio-level insights that reduce avoidable costs and support sustainable profitability."
           primaryBtn={{ label: "Discover the Platform" }}
           secondaryBtn={{ label: "Request an ROI Analysis" }}
+          backgroundImage={payersBanner}
         />
         <PayersOutcomes
           tagLine="FOR PAYERS"

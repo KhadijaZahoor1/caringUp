@@ -11,6 +11,7 @@ import Outcoms from "../solution/sections/Outcoms";
 import ClinicalTrial from "../solution/sections/ClinicalTrial";
 import InsightsToAction from "../solution/sections/InsightsToAction";
 import ClinicalCentre from "../solution/sections/ClinicalCentre";
+import platformBanner from "../../assets/images/platformBanner.png";
 
 const Platform = () => {
   return (
@@ -21,6 +22,8 @@ const Platform = () => {
           title={"Outcomes at Scale, Without Scaling Your Clinical Team"}
           description="Deliver better health outcomes and lower costs across your ecosystem—deployable in hours, not months."
           primaryBtn={{ label: "Schedule a Demo" }}
+           backgroundImage={platformBanner}
+           container
         />
         <TitleSection
           heading={"One Platform, Two Ways to Deliver Value."}

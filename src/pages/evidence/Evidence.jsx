@@ -14,6 +14,7 @@ import EvidencePublications from "./sections/EvidencePublications";
 import GlobalRegistries from "./sections/GlobalRegistries";
 import QualityOfLife from "./sections/QualityOfLife";
 import EvidenceResearch from "./sections/EvidenceResearch";
+import evidenceBanner from "../../assets/images/evidenceBanner.png";
 
 const Evidence = () => {
   /* ---------------- SECTION REFS ---------------- */
@@ -72,6 +73,7 @@ const Evidence = () => {
         <Header />
 
         <Hero
+          backgroundImage={evidenceBanner}
           title="World-Class, Award-Winning RCT Proven in Real-World Clinical Settings"
           description="Validated through a multi-site, ethics-approved randomized controlled trial—supported by peer-reviewed publications and international recognition."
         />

@@ -9,6 +9,7 @@ import DeploymentSection from "../components/DeploymentSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/layout/Footer";
 import TrustBar from "../components/TrustBar";
+import HeroImage from "../assets/images/Hero.jpg";
 
 const Home = () => {
   return (
@@ -19,6 +20,8 @@ const Home = () => {
           title={`Active Disease and\nRisk Management. At\nScale`}
           description="Continuous management of chronic and complex conditions—powered by a dynamic remote monitoring platform designed for resource-constrained healthcare ecosystems."
            primaryBtn={{ label: "Schedule a Demo" }}
+           backgroundImage={HeroImage}
+           container
         />
         <TrustBar />
         <FeatureOverview />

@@ -1,5 +1,4 @@
 import React from "react";
-import HeroImage from "../assets/images/Hero.jpg";
 import CustomButton from "./Button";
 
 const Hero = ({
@@ -7,7 +6,8 @@ const Hero = ({
   description,
   primaryBtn,
   secondaryBtn,
-  backgroundImage = HeroImage,
+  backgroundImage,
+  container = false,
 }) => {
   return (
     <section className="lg:px-4">
@@ -35,7 +35,7 @@ const Hero = ({
         />
 
         {/* Content Wrapper */}
-        <div className="relative z-10 h-full max-w-[720px] m-auto flex flex-col items-center justify-center text-center px-6">
+        <div className={` ${container ? 'max-w-[720px]' : 'max-w-[936px]'} relative z-10 h-full m-auto flex flex-col items-center justify-center text-center px-6`}>
           <h1 className="text-white heading-1 tracking-tight mb-6">
             {title}
           </h1>

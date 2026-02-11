@@ -10,6 +10,7 @@ import DiseaseManagementSection from "../../components/DiseaseManagementSection 
 import healthIcon1 from '../../assets/icons/healthIcon1.png'
 import healthIcon2 from '../../assets/icons/healthIcon2.png'
 import healthIcon3 from '../../assets/icons/healthIcon3.png'
+import healthBanner from "../../assets/images/healthBanner.png";
  
 const HealthCare = () => {
   const outcomes = [
@@ -95,6 +96,7 @@ Programs`;
           description="Transform one-time treatments into lasting patient relationships with a platform clinically proven to improve outcomes, satisfaction, and long-term retention."
            primaryBtn={{ label: "Discover the Platform" }}
             secondaryBtn={{ label: "Request a Demo" }}
+             backgroundImage={healthBanner}
         />
         <OutcomesSection
           tagLine="For Healthcare Providers"

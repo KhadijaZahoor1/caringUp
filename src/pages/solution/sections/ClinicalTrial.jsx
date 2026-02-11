@@ -22,7 +22,7 @@ const trialResults  = [
 
 const ClinicalTrial = () => {
   return (
-    <div className="md:my-[120px] my-20 md:mx-3 py-[100px] rounded-[32px] md:rounded-[64px] bg-white">
+    <div className="md:my-[120px] my-20 py-[100px] rounded-[32px] md:rounded-[64px] bg-white">
       <div className='max-w-[1176px] mx-auto'>
       {/* Header Area */}
       <div className="text-center">

@@ -11,6 +11,7 @@ import DiseaseManagementSection from "../../components/DiseaseManagementSection 
 import organization1 from '../../assets/images/organization1.png'
 import organization2 from '../../assets/images/organization2.png'
 import organization3 from '../../assets/images/organization3.png'
+import publicHealthBanner from "../../assets/images/publicHealthBanner.png";
  
 
  const benefits = [
@@ -55,6 +56,7 @@ const PublicHealth = () => {
           description="Strengthen national NCD, TB, and HIV programs with insights and coordinated workflows—built to support SDG targets and operate fully on your terms."
           primaryBtn={{ label: "Explore the Platform" }}
           secondaryBtn={{ label: "Schedule a Strategy Alignment Session" }}
+          backgroundImage={publicHealthBanner}
         />
         <PublicHealthDeployment />
         <PublicHealthManagement />
