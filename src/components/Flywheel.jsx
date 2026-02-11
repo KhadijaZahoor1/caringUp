@@ -3,7 +3,7 @@ import flywheel from '../assets/images/flywheel.png'
 
 const Flywheel = () => {
   return (
-    <div className="md:pt-[120px] md:pb-44 py-0 flex items-center justify-center">
+    <div className="md:pt-[120px] md:pb-44 py-0 pt-20 flex items-center justify-center">
       <div className="max-w-[1176px] w-full flex flex-col items-center">
 
         {/* Header */}
@@ -21,7 +21,7 @@ const Flywheel = () => {
   {/* Left Side */}
   <div className="flex flex-col gap-24 md:text-right text-center px-4 md:w-1/4">
     <div>
-      <div className="inline-block bg-[#1D4477] text-white px-12 py-5 rounded-full heading-6 mb-6">
+      <div className="inline-block bg-[#1D4477] text-white md:px-12 md:py-5 py-2 px-10 rounded-full heading-6 mb-6">
         Predict
       </div>
       <p className="body-text text-lg text-primary">
@@ -29,7 +29,7 @@ const Flywheel = () => {
       </p>
     </div>
     <div>
-      <div className="inline-block bg-[#32A0D4] text-white px-12 py-5 rounded-full heading-6 mb-6">
+      <div className="inline-block bg-[#32A0D4] text-white md:px-12 md:py-5 py-2 px-10 rounded-full heading-6 mb-6">
         Sustain
       </div>
       <p className="body-text text-lg text-primary">
@@ -46,7 +46,7 @@ const Flywheel = () => {
   {/* Right Side */}
   <div className="flex flex-col gap-24 md:text-left text-center px-4 md:w-1/4">
     <div>
-      <div className="inline-block bg-[#F4B942] text-white px-12 py-5 rounded-full heading-6 mb-6">
+      <div className="inline-block bg-[#F4B942] text-white md:px-12 md:py-5 py-2 px-10 rounded-full heading-6 mb-6">
         Prevent
       </div>
       <p className="body-text text-lg text-primary">
@@ -54,7 +54,7 @@ const Flywheel = () => {
       </p>
     </div>
     <div>
-      <div className="inline-block bg-[#76C052] text-white px-12 py-5 rounded-full heading-6 mb-6">
+      <div className="inline-block bg-[#76C052] text-white md:px-12 md:py-5 py-2 px-10 rounded-full heading-6 mb-6">
         Control
       </div>
       <p className="body-text text-lg text-primary">

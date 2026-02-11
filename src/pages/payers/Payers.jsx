@@ -120,7 +120,7 @@ Events`;
           secondaryBtn={{ label: "Request an ROI Analysis" }}
         />
         <PayersOutcomes
-        tagLine="FOR PAYERS"
+          tagLine="FOR PAYERS"
           heading="Clinically Proven, Data Driven Cost Containment"
           subHeading="Lower the Baseline and Flatten the Cost Curve of Chronic Care"
           outcomes={outcomes}

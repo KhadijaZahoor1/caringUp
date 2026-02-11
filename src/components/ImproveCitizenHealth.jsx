@@ -60,8 +60,8 @@ const ImproveCitizenHealth = () => {
   ];
 
   return (
-    <div className=" bg-[#F4F8FF] py-24 px-12 font-sans">
-      <div className="max-w-[1280px] mx-auto">
+    <div className=" md:py-[120px] py-20">
+      <div className="max-w-[1176px] mx-auto">
         
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-32">
@@ -69,11 +69,7 @@ const ImproveCitizenHealth = () => {
           {/* Headline - Left side */}
           <div className="lg:sticky lg:top-24">
             <h1 className="text-[56px] font-bold text-slate-900 leading-[1.1] mb-8">
-              Improve <br />
-              Citizen Health, <br />
-              Optimize <br />
-              Public <br />
-              Resources
+              Improve Citizen Health, Optimize Public Resources
             </h1>
             <p className="text-slate-500 text-lg max-w-[320px]">
               Convert risk intelligence into timely, targeted interventions
@@ -89,28 +85,7 @@ const ImproveCitizenHealth = () => {
         </div>
 
         {/* Footer Section */}
-        <div className="mt-20">
-          <h2 className="text-center text-xl font-bold text-slate-800 mb-12">
-            Trusted by Leading Health Organizations
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <PartnerCard 
-              name="WHO DHA" 
-              detail="World Health Organization Digital Health Atlas" 
-              logo="https://upload.wikimedia.org/wikipedia/commons/c/c2/WHO_logo.svg" 
-            />
-            <PartnerCard 
-              name="Clinical Trial GOV" 
-              detail="Registered Clinical Evidence" 
-              logo="https://clinicaltrials.gov/ct2/html/images/ctgov-logo.png" 
-            />
-            <PartnerCard 
-              name="Multi-Country" 
-              detail="Deployed Across Asia-Pacific" 
-              logo="https://upload.wikimedia.org/wikipedia/commons/e/ee/UN_emblem_blue.svg" 
-            />
-          </div>
-        </div>
+       
       </div>
     </div>
   );
