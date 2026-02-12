@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from "../../components/layout/Container";
 import Header from "../../components/layout/Header";
 import Hero from "../../components/Hero";
@@ -17,6 +17,28 @@ import EvidenceResearch from "./sections/EvidenceResearch";
 import evidenceBanner from "../../assets/images/evidenceBanner.png";
 
 const Evidence = () => {
+
+  /* ---------------- HEADER VISIBILITY ---------------- */
+  const [hideHeader, setHideHeader] = useState(false);
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!heroRef.current) return;
+
+      const heroHeight = heroRef.current.offsetHeight;
+
+      if (window.scrollY > heroHeight - 100) {
+        setHideHeader(true);
+      } else {
+        setHideHeader(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   /* ---------------- SECTION REFS ---------------- */
   const glanceRef = useRef(null);
   const adherenceRef = useRef(null);
@@ -24,7 +46,7 @@ const Evidence = () => {
   const savingsRef = useRef(null);
   const qualityLifeRef = useRef(null);
   const productivityRef = useRef(null);
-  const RCTResearchRef  = useRef(null)
+  const RCTResearchRef = useRef(null);
   const publicationRef = useRef(null);
   const registriesRef = useRef(null);
 
@@ -43,7 +65,7 @@ const Evidence = () => {
     { name: "Cost Savings", ref: savingsRef },
     { name: "Quality of Life", ref: qualityLifeRef },
     { name: "Productivity Gains", ref: productivityRef },
-     { name: "Productivity Gains", ref: RCTResearchRef },
+    { name: "RCT Research", ref: RCTResearchRef }, // fixed duplicate
     { name: "Publications", ref: publicationRef },
     { name: "Global Registries", ref: registriesRef },
   ];
@@ -52,7 +74,6 @@ const Evidence = () => {
   const handleTabClick = (link) => {
     setActive(link.name);
 
-    /* Slide the quick-links nav */
     const tabEl = tabRefs.current[link.name];
     tabEl?.scrollIntoView({
       behavior: "smooth",
@@ -60,7 +81,6 @@ const Evidence = () => {
       block: "nearest",
     });
 
-    /* Scroll to section */
     link.ref.current?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -68,87 +88,93 @@ const Evidence = () => {
   };
 
   return (
-    <div>
-      <Container>
-        <Header />
+    <Container>
+      <Header hidden={hideHeader} />
 
+      {/* HERO WRAPPED WITH REF */}
+      <div ref={heroRef} className="">
         <Hero
           backgroundImage={evidenceBanner}
           title="World-Class, Award-Winning RCT Proven in Real-World Clinical Settings"
           description="Validated through a multi-site, ethics-approved randomized controlled trial—supported by peer-reviewed publications and international recognition."
         />
+      </div>
 
-        {/* ---------- STICKY QUICK LINKS ---------- */}
-        <div className=" bg-[#F7FAFF] py-4 mb-24 w-[936px] m-auto">
-          <p className="text-sm font-semibold text-gray-500 mb-4 text-center">
+      {/* ---------- STICKY QUICK LINKS ---------- */}
+      <div className="sticky top-0 bg-white z-40 border-b">
+        <div className="max-w-[936px] mx-auto py-11">
+          <p className="body-text-1 mb-6 text-center text-primary">
             Quick Links:
           </p>
 
-          <div ref={navRef} className="flex gap-3 overflow-hidden px-4 py-2">
+          <div
+            ref={navRef}
+            className="flex gap-2 overflow-x-hidden"
+          >
             {quickLinks.map((link) => (
               <button
                 key={link.name}
                 ref={(el) => (tabRefs.current[link.name] = el)}
                 onClick={() => handleTabClick(link)}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all
-          ${
-            active === link.name
-              ? "bg-[#2E3A8C] text-white shadow-md"
-              : "bg-[#E2E8F0] text-[#475569] hover:bg-gray-300"
-          }`}
+                className={`px-4 py-2.5 rounded-full body-text-1 whitespace-nowrap transition-all
+                  ${
+                    active === link.name
+                      ? "bg-[#1B447D] text-white shadow-md"
+                      : "bg-[#E2E8F0] text-primary hover:bg-gray-300"
+                  }`}
               >
                 {link.name}
               </button>
             ))}
           </div>
         </div>
+      </div>
 
-        {/* ---------- SECTIONS ---------- */}
-        <section ref={glanceRef} className="scroll-mt-[160px]">
-          <EvidenceGlance />
-        </section>
+      {/* ---------- SECTIONS ---------- */}
+      <section ref={glanceRef} className="scroll-mt-[120px]">
+        <EvidenceGlance />
+      </section>
 
-        <section ref={adherenceRef} className="scroll-mt-[160px]">
-          <EvidenceImprovements />
-        </section>
+      <section ref={adherenceRef} className="scroll-mt-[120px]">
+        <EvidenceImprovements />
+      </section>
 
-        <section ref={outcomesRef} className="scroll-mt-[160px]">
-          <EvidenceClinicalOutcomes />
-        </section>
+      <section ref={outcomesRef} className="scroll-mt-[120px]">
+        <EvidenceClinicalOutcomes />
+      </section>
 
-        <section ref={savingsRef} className="scroll-mt-[160px]">
-          <CostSavings />
-        </section>
+      <section ref={savingsRef} className="scroll-mt-[120px]">
+        <CostSavings />
+      </section>
 
-        <section ref={qualityLifeRef} className="scroll-mt-[160px]">
-         <QualityOfLife />
-        </section>
+      <section ref={qualityLifeRef} className="scroll-mt-[120px]">
+        <QualityOfLife />
+      </section>
 
-        <section ref={productivityRef} className="scroll-mt-[160px]">
-          <ProductivityGains />
-        </section>
+      <section ref={productivityRef} className="scroll-mt-[120px]">
+        <ProductivityGains />
+      </section>
 
-         <section ref={RCTResearchRef} className="scroll-mt-[160px]">
-          <EvidenceResearch />
-        </section>
+      <section ref={RCTResearchRef} className="scroll-mt-[120px]">
+        <EvidenceResearch />
+      </section>
 
-        <section ref={publicationRef} className="scroll-mt-[160px]">
-          <EvidencePublications />
-        </section>
+      <section ref={publicationRef} className="scroll-mt-[120px]">
+        <EvidencePublications />
+      </section>
 
-        <section ref={registriesRef} className="scroll-mt-[160px]">
-          <GlobalRegistries />
-        </section>
+      <section ref={registriesRef} className="scroll-mt-[120px]">
+        <GlobalRegistries />
+      </section>
 
-        <CTASection
-          title="Ready to Achieve Similar Outcomes?"
-          description="Join healthcare organizations worldwide leveraging evidence-based RPM."
-          buttonText="Download Full Research Report"
-        />
+      <CTASection
+        title="Ready to Achieve Similar Outcomes?"
+        description="Join healthcare organizations worldwide leveraging evidence-based RPM."
+        buttonText="Download Full Research Report"
+      />
 
-        <Footer />
-      </Container>
-    </div>
+      <Footer />
+    </Container>
   );
 };
 

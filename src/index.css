@@ -96,9 +96,6 @@
 /* ===== Global styles ===== */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -115,3 +112,11 @@ body {
     background-position: center center;
   }
  }
+
+.evidenceTable thead tr th {
+  @apply body-text-1 font-medium text-primary;
+}
+
+.evidenceTable tbody tr td {
+  @apply body-text-1  text-primary;
+}

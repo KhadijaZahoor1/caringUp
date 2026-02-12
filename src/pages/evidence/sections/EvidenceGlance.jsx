@@ -1,78 +1,124 @@
-import React, { useRef } from 'react';
-// import { CheckCircle2 } from 'lucide-react';
+import React, { useRef } from "react";
+import heartLine from '../../../assets/icons/heartLine.png'
+import circle from '../../../assets/icons/checkbox-circle-fill.png'
 
 const EvidenceGlance = () => {
-
   const stats = [
-    { label: "Study Populations", value: "1,160", sub: "Control Group: 541\nIntervention Group: 619" },
-    { label: "Medication Adherence (6 months)", value: "88,4%", sub: "+34% absolute from baseline\nvs. 68.7% control group", highlight: true },
-    { label: "Cost Savings", value: "-37%", sub: "IG vs. CG (excl. hospitalization)", orange: true },
+    {
+      label: "Study Populations",
+      value: "1,160",
+      text1: "Control Group:",
+      text1value: '541',
+      text2: "Intervention Group:",
+      text2value: '565'
+    },
+    {
+      label: "Medication Adherence (6 months)",
+      value: "88,4%",
+      text1value: '+24% absolute from baseline',
+      text2value: 'vs. 66.7% control group'
+    },
+    {
+      label: "Cost Savings",
+      value: "-37%",
+       text1value: 'IG vs. CG (excl. hospitalization)',
+    },
   ];
 
   const outcomeCards = [
-    { title: "Diabetes (HbA1c)", value: "-1.0%", desc: "absolute IG vs. +0.2% CG" },
-    { title: "Asthma (ACQ-6 score)", value: "-0.63", desc: "IG vs. -0.27 in CG" },
-    { title: "Heart Failure (EF%)", value: "+50%", desc: "relative from baseline" },
-    { title: "Cholesterol (LDL mmol/L)", value: "-0.13", desc: "IG vs. +0.28 in CG" },
+    {
+      title: "Diabetes (HbA1c)",
+      value: "-1.0%",
+      desc: "absolute IG vs. +0.2% CG",
+    },
+    {
+      title: "Asthma (ACQ-6 score)",
+      value: "-0.63",
+      desc: "IG vs. -0.27 in CG",
+    },
+    {
+      title: "Heart Failure (EF%)",
+      value: "+50%",
+      desc: "relative from baseline",
+    },
+    {
+      title: "Cholesterol (LDL mmol/L)",
+      value: "-0.13",
+      desc: "IG vs. +0.28 in CG",
+    },
     { title: "Hypertension (SBP mmHg)", value: "-10", desc: "IG vs. +1.3 CG" },
-    { title: "Quality of Life (AQoL-8D)", value: "0.56 → 0.68", desc: "major improvement" },
+    {
+      title: "Quality of Life (AQoL-8D)",
+      value: "0.56 → 0.68",
+      desc: "major improvement",
+    },
   ];
 
   return (
-    <div className="max-w-[1176px] mx-auto py-12 px-4 font-sans text-[#0F172A]">
-
+    <div className="max-w-[1176px] mx-auto md:py-[120px] py-20">
       {/* 2. Main Title */}
-      <div className="text-center mb-16 pt-10">
-        <h2 className="text-[56px] font-bold tracking-tight">At A Glance</h2>
+      <div className="">
+        <h2 className="heading-2 text-center">At A Glance</h2>
       </div>
 
       {/* 3. Top Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
         {stats.map((stat, idx) => (
-          <div key={idx} className="bg-white rounded-[32px] p-10 border border-gray-100 shadow-sm relative overflow-hidden">
-            <p className="text-[#64748B] text-sm font-medium mb-4">{stat.label}</p>
-            <h3 className="text-[48px] font-bold mb-4">{stat.value}</h3>
-            <div className="text-sm leading-relaxed whitespace-pre-line text-[#64748B]">
-              {stat.highlight && <span className="text-[#22C55E] font-bold block mb-1">✓ +34% absolute from baseline</span>}
-              {stat.orange && <span className="text-[#F97316] font-bold block mb-1">IG vs. CG (excl. hospitalization)</span>}
-              {!stat.highlight && !stat.orange && stat.sub}
-              {(stat.highlight || stat.orange) && <span className="opacity-70">vs. 68.7% control group</span>}
+          <div
+            key={idx}
+            className="bg-white border border-borderClr shadow-sm rounded-3xl p-8"
+          >
+            <p className="body-text-1">{stat.label}</p>
+            <h3 className="heading-2 text-[#0F172A] py-2">{stat.value}</h3>
+            <div className="flex flex-col gap-1">
+              <p className="body-text-1 text-primary">
+                {stat.text1} <span className="body-text-1">{stat.text1value}</span>
+              </p>
+              <p className="body-text-1 text-primary">
+                {stat.text2} <span className="body-text-1">{stat.text2value}</span>
+              </p>
             </div>
           </div>
         ))}
       </div>
 
       {/* 4. Clinical Outcomes Section */}
-      <div className="bg-white rounded-[40px] p-12 border border-gray-100 shadow-sm pt-10">
-        <h4 className="text-xl font-bold mb-10">Clinical Outcomes (IG @ 6 months from baseline)</h4>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="bg-white rounded-[40px] mt-6 p-8 border border-borderClr shadow-sm">
+        <h4 className="heading-6">
+          Clinical Outcomes (IG @ 6 months from baseline)
+        </h4>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
           {outcomeCards.map((card, idx) => (
-            <div key={idx} className="bg-[#F8FAFC] rounded-[24px] p-8 flex items-center gap-6 border border-gray-50">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-400 to-indigo-500 shadow-sm flex-shrink-0" />
+            <div
+              key={idx}
+              className="bg-[#F8FAFC] rounded-3xl p-6 flex items-start gap-6 border border-borderClr"
+            >
+              <img src={heartLine} alt="heartLine" />
               <div>
-                <p className="text-xs font-semibold text-gray-400 mb-1 uppercase tracking-wider">{card.title}</p>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-[32px] font-bold">{card.value}</span>
-                  <span className="text-sm text-gray-500">{card.desc}</span>
-                </div>
+                <p className="body-text-1">{card.title}</p>  
+                <p className="heading-3 py-2">{card.value}</p>
+                <p className="body-text-1">{card.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* 5. Blue Footer Info Box */}
-        <div className="mt-12 bg-[#E0E7FF] bg-opacity-60 border border-white rounded-[24px] p-8 flex items-start gap-4">
-          <div className="mt-1">
-            {/* <CheckCircle2 className="w-6 h-6 text-[#22C55E]" fill="white" /> */}
-          </div>
-          <p className="text-[#374151] text-lg leading-relaxed">
-            The impact is clinically and statistically significant. HbA1c impact is one of the highest from any mHealth tool globally. 
-            Asthma patients on CareAide are <span className="text-[#2E3A8C] font-bold underline">2x more likely</span> to control their condition compared to standard care.
+        <div className=" bg-[#E0E7FF] border rounded-[24px] p-8 flex items-center gap-6">
+         
+           <img src={circle} alt="circle" className="w-8 h-8" />
+          
+          <p className="body-text">
+            The impact is clinically and statistically significant. HbA1c impact
+            is one of the highest from any mHealth tool globally. Asthma
+            patients on CareAide are{" "}
+            <span className="body-text text-[#2563EB]">
+              2x more likely
+            </span>{" "}
+            to control their condition compared to standard care.
           </p>
         </div>
       </div>
-
     </div>
   );
 };
