@@ -1,5 +1,5 @@
 import React from "react";
-import CTABackground from "../assets/images/Hero.jpg";
+import CTABackground from "../assets/images/footerhero.png";
 import CustomButton from "./Button";
 
 const CTASection = ({

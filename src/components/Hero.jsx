@@ -28,7 +28,7 @@ const Hero = ({
             Using the exact Figma hex values: #0D0F0D at 0% and #0B0C0B at 100%
         */}
         <div 
-          className="absolute inset-0" 
+          className="absolute inset-0 md:rounded-[64px]" 
           style={{
             background: "linear-gradient(180deg, rgba(13, 15, 13, 0) 0%, rgba(11, 12, 11, 1) 100%)"
           }} 

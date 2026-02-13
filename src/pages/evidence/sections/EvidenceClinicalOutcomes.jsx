@@ -78,42 +78,83 @@ const EvidenceClinicalOutcomes = () => {
             Detailed Clinical Measurements: Baseline vs 6 Months
           </h3>
 
+          {/* Scroll Wrapper */}
           <div className="overflow-x-auto py-8">
-            <table className="w-full border-collapse text-left evidenceTable">
-              <thead className="">
+            <table
+              className="
+                  border-collapse text-left evidenceTable
+                  min-w-[1096px]   /* 137px × 8 columns */
+                  
+                  /* CG Columns */
+                  [&_th:nth-child(3)]:bg-[#F1F5F9]
+                  [&_th:nth-child(4)]:bg-[#F1F5F9]
+                  [&_td:nth-child(3)]:bg-[#F1F5F9]
+                  [&_td:nth-child(4)]:bg-[#F1F5F9]
+
+                  /* IG Columns */
+                  [&_th:nth-child(5)]:bg-[#E9EEF8]
+                  [&_th:nth-child(6)]:bg-[#E9EEF8]
+                  [&_td:nth-child(5)]:bg-[#E9EEF8]
+                  [&_td:nth-child(6)]:bg-[#E9EEF8]
+                "
+            >
+              <thead>
                 <tr className="border-b border-borderClr">
-                  <th className="py-4 px-2">Condition / Biomarker</th>
-                  <th className="py-4 px-2">Measurement</th>
-                  <th className="py-4 px-2">CG Baseline</th>
-                  <th className="py-4 px-2">CG 6 Months</th>
-                  <th className="py-4 px-2">IG Baseline</th>
-                  <th className="py-4 px-2">IG 6 Months</th>
-                  <th className="py-4 px-2">
+                  <th className="py-1 px-2 w-[137px] min-w-[137px]">
+                    Condition / Biomarker
+                  </th>
+                  <th className="py-1 px-2 w-[137px] min-w-[137px]">
+                    Measurement
+                  </th>
+                  <th className="py-1 px-2 w-[137px] min-w-[137px]">
+                    CG Baseline
+                  </th>
+                  <th className="py-1 px-2 w-[137px] min-w-[137px]">
+                    CG 6 Months
+                  </th>
+                  <th className="py-1 px-2 w-[137px] min-w-[137px]">
+                    IG Baseline
+                  </th>
+                  <th className="py-1 px-2 w-[137px] min-w-[137px]">
+                    IG 6 Months
+                  </th>
+                  <th className="py-1 px-2 w-[137px] min-w-[137px]">
                     Change (IG vs CG)
                   </th>
-                  <th className="py-4 px-2">Target Range*</th>
+                  <th className="py-1 px-2 w-[137px] min-w-[137px]">
+                    Target Range*
+                  </th>
                 </tr>
               </thead>
+
               <tbody className="body-text-1">
                 {tableData.map((row, idx) => (
                   <tr
                     key={idx}
-                    className="border-b border-borderClr transition-colors"
+                    className="border-b border-borderClr transition-colors hover:bg-gray-50"
                   >
-                    <td className="py-4 px-2">{row.condition}</td>
-                    <td className="py-4 px-2">
+                    <td className="py-1 px-2 w-[137px] min-w-[137px]">
+                      {row.condition}
+                    </td>
+                    <td className="py-1 px-2 w-[137px] min-w-[137px]">
                       {row.measurement}
                     </td>
-                    <td className="py-4 px-2">{row.cgBase}</td>
-                    <td className="py-4 px-2">{row.cg6m}</td>
-                    <td className="py-4 px-2">{row.igBase}</td>
-                    <td className="py-4 px-2">
+                    <td className="py-1 px-2 w-[137px] min-w-[137px]">
+                      {row.cgBase}
+                    </td>
+                    <td className="py-1 px-2 w-[137px] min-w-[137px]">
+                      {row.cg6m}
+                    </td>
+                    <td className="py-1 px-2 w-[137px] min-w-[137px]">
+                      {row.igBase}
+                    </td>
+                    <td className="py-1 px-2 w-[137px] min-w-[137px]">
                       {row.ig6m}
                     </td>
-                    <td className="py-4 px-2">
+                    <td className="py-1 px-2 w-[137px] min-w-[137px]">
                       {row.change}
                     </td>
-                    <td className="py-4 px-2">
+                    <td className="py-1 px-2 w-[137px] min-w-[137px]">
                       {row.target}
                     </td>
                   </tr>
@@ -122,10 +163,10 @@ const EvidenceClinicalOutcomes = () => {
             </table>
           </div>
 
-          {/* Citations / Info Box */}
-          <div className="bg-[#F8FAFC] rounded-3xl p-8 flex items-start gap-6 border border-borderClr">
+          {/* Info Box */}
+          <div className="bg-[#F8FAFC] rounded-3xl p-8 flex md:flex-row flex-col items-start gap-6 border border-borderClr">
             <img src={info} alt="info" />
-            <div className="">
+            <div>
               <p className="body-text text-primary mb-4">
                 *ESC/ESH 2018; MOH Malaysia HTN CPG 2023; AHA/ACC 2018 Lipid
                 Guideline; ADA 2024; WHO 2020 Diagnostic Criteria; GINA 2023;

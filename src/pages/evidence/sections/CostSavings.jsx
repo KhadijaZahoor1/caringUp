@@ -1,114 +1,274 @@
-import React, { useState } from 'react';
-// import { Info } from 'lucide-react';
+import React, { useState } from "react";
+import stack from "../../../assets/icons/stack.png";
+import cost from "../../../assets/images/evidenceCost.png";
+import avoidanceCost from "../../../assets/images/evidenceCost2.png";
+
+const directSavingsData = [
+  {
+    disease: "Hypertension",
+    ig: "220",
+    cg: "250",
+    delta: "-30",
+    pdc: "98% vs. 85%",
+  },
+  {
+    disease: "Diabetes",
+    ig: "310",
+    cg: "340",
+    delta: "-30",
+    pdc: "100% vs. 67%",
+  },
+  { disease: "Asthma", ig: "180", cg: "210", delta: "-30", pdc: "95% vs. 50%" },
+  {
+    disease: "Heart Failure",
+    ig: "400",
+    cg: "420",
+    delta: "-20",
+    pdc: "93% vs. 83%",
+  },
+];
+
+const complicationData = [
+  { disease: "Hypertension", driver: "Fewer add-on drugs", savings: "350" },
+  {
+    disease: "Diabetes",
+    driver: "Delayed Insulin initiation",
+    savings: "1,440",
+  },
+  { disease: "Asthma", driver: "Reduced SABA + ER visits", savings: "215" },
+  {
+    disease: "Heart Failure",
+    driver: "Fewer adjustments + admissions",
+    savings: "1,100 (+ RM 1,500 risk)",
+  },
+];
 
 const CostSavings = () => {
-  const [activeTab, setActiveTab] = useState('direct'); // 'direct' or 'avoidance'
-
-  const directSavingsData = [
-    { disease: "Hypertension", ig: "220", cg: "250", delta: "-30", pdc: "98% vs. 85%" },
-    { disease: "Diabetes", ig: "310", cg: "340", delta: "-30", pdc: "100% vs. 67%" },
-    { disease: "Asthma", ig: "180", cg: "210", delta: "-30", pdc: "95% vs. 50%" },
-    { disease: "Heart Failure", ig: "400", cg: "420", delta: "-20", pdc: "93% vs. 83%" },
-  ];
-
-  const complicationData = [
-    { disease: "Hypertension", driver: "Fewer add-on drugs", savings: "350" },
-    { disease: "Diabetes", driver: "Delayed Insulin initiation", savings: "1,440" },
-    { disease: "Asthma", driver: "Reduced SABA + ER visits", savings: "215" },
-    { disease: "Heart Failure", driver: "Fewer adjustments + admissions", savings: "1,100 (+ RM 1,500 risk)" },
-  ];
+  const [activeTab, setActiveTab] = useState("direct"); // 'direct' or 'avoidance'
 
   return (
-    <div className="max-w-[1176px] mx-auto py-24 px-4 font-sans text-[#0F172A]">
-      {/* 1. Header & Summary Cards */}
-      <h2 className="text-[44px] font-bold text-center mb-16 text-[#0F172A]">Healthcare Cost Savings</h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        <div className="bg-white rounded-[32px] p-10 border border-gray-100 shadow-sm relative overflow-hidden">
-          <p className="text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Direct Medication Saving</p>
-          <h3 className="text-[44px] font-bold mb-2">RM 360K</h3>
-          <p className="text-[#64748B] text-xs">Per 1,000 patients annually through optimized medication use and better adherence</p>
-        </div>
-        <div className="bg-white rounded-[32px] p-10 border border-gray-100 shadow-sm relative overflow-hidden">
-          <p className="text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-2">Medication Adherence (6-months)</p>
-          <h3 className="text-[44px] font-bold mb-2">RM 3M+</h3>
-          <p className="text-[#64748B] text-xs">Per 1,000 patients annually by preventing disease progression and complications</p>
-        </div>
-      </div>
+    <section className="md:rounded-[64px] rounded-[32px] bg-white my-[120px]">
+      <div className="max-w-[1224px] mx-auto py-24">
+        {/* 1. Header & Summary Cards */}
+        <h2 className="heading-2 text-center mb-16">Healthcare Cost Savings</h2>
 
-      {/* 2. Main Tabbed Dashboard */}
-      <div className="bg-white rounded-[40px] border border-gray-100 shadow-sm overflow-hidden">
-        {/* Custom Tab Switcher */}
-        <div className="flex border-b border-gray-100">
-          <button 
-            onClick={() => setActiveTab('direct')}
-            className={`flex-1 py-8 px-4 text-center transition-all ${activeTab === 'direct' ? 'bg-white font-bold border-b-4 border-indigo-600' : 'bg-gray-50 text-gray-400 font-medium hover:bg-gray-100'}`}
-          >
-            Direct Medication Savings <br/> <span className="text-[10px] font-normal opacity-60">(Monthly consumption data)</span>
-          </button>
-          <button 
-            onClick={() => setActiveTab('avoidance')}
-            className={`flex-1 py-8 px-4 text-center transition-all ${activeTab === 'avoidance' ? 'bg-white font-bold border-b-4 border-indigo-600' : 'bg-gray-50 text-gray-400 font-medium hover:bg-gray-100'}`}
-          >
-            Complication Avoidance Savings <br/> <span className="text-[10px] font-normal opacity-60">(Annual cost avoided)</span>
-          </button>
-        </div>
-
-        <div className="p-12">
-          <h4 className="text-center font-bold text-gray-700 mb-10">
-            {activeTab === 'direct' 
-              ? "IG consume less medicine (avg. per month savings)" 
-              : "Medicine cost savings per year by avoiding complications"}
-          </h4>
-
-          {/* Extrapolation Banner */}
-          <div className="bg-[#F1F5F9] rounded-2xl p-6 text-center mb-10">
-            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Extrapolate to 1K patients/year</p>
-            <p className="text-xl font-bold">{activeTab === 'direct' ? "RM 360K/year" : "RM 1.3M/year (~3M/year)"}</p>
+        <div className="flex flex-col gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-3xl p-8 border border-borderClr shadow-sm">
+              <p className="body-text-1">Direct Medication Saving</p>
+              <h3 className="heading-2 my-1">RM 360K</h3>
+              <p className="body-text-1">
+                Per 1,000 patients annually through optimized medication use and
+                better adherence
+              </p>
+            </div>
+            <div className="rounded-3xl p-8 border border-borderClr shadow-sm">
+              <p className="body-text-1">Medication Adherence (6 months)</p>
+              <h3 className="heading-2 my-1">RM 3M+</h3>
+              <p className="body-text-1">
+                Per 1,000 patients annually by preventing disease progression
+                and complications
+              </p>
+            </div>
           </div>
 
-          {/* Conditional Table Rendering */}
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="text-[10px] font-bold text-gray-400 uppercase border-b border-gray-50">
-                  <th className="py-4">Disease</th>
-                  <th className="py-4">{activeTab === 'direct' ? 'IG Cost (RM)' : 'Key Savings Driver'}</th>
-                  <th className="py-4">{activeTab === 'direct' ? 'CG Cost (RM)' : 'Cost Avoided/Patient/Year (RM)'}</th>
-                  {activeTab === 'direct' && <th className="py-4">Δ Cost (RM)</th>}
-                  {activeTab === 'direct' && <th className="py-4">PDC Impact</th>}
-                </tr>
-              </thead>
-              <tbody className="text-sm">
-                {(activeTab === 'direct' ? directSavingsData : complicationData).map((row, idx) => (
-                  <tr key={idx} className="border-b border-gray-50 hover:bg-gray-50/30">
-                    <td className="py-4 font-bold">{row.disease}</td>
-                    <td className="py-4 text-gray-600">{activeTab === 'direct' ? row.ig : row.driver}</td>
-                    <td className="py-4 text-gray-600">{activeTab === 'direct' ? row.cg : row.savings}</td>
-                    {activeTab === 'direct' && <td className="py-4 font-bold text-green-600">{row.delta}</td>}
-                    {activeTab === 'direct' && <td className="py-4 text-[11px] text-gray-400">{row.pdc}</td>}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          {/* 2. Main Tabbed Dashboard */}
+          <div className="border border-borderClr shadow-sm md:p-12 p-5 rounded-[32px]">
+            {/* Custom Tab Switcher */}
+            <div className="flex">
+              <button
+                onClick={() => setActiveTab("direct")}
+                className={`flex-1 py-4 text-center rounded-t-[24px] transition-all ${activeTab === "direct" ? " bg-[#1b447d14] border-b-4 border-b-[#1B447D]" : "border-borderClr border-b-4"}`}
+              >
+                <span
+                  className={`body-text-heading ${activeTab === "direct" ? "text-[#1B447D]" : ""} `}
+                >
+                  {" "}
+                  Direct Medication Savings{" "}
+                </span>{" "}
+                <br />
+                <span className="body-text-1">(Monthly consumption data)</span>
+              </button>
+              <button
+                onClick={() => setActiveTab("avoidance")}
+                className={`flex-1 py-4 text-center rounded-t-[24px] transition-all ${activeTab === "avoidance" ? " bg-[#1b447d14] border-b-4 border-b-[#1B447D]" : "border-borderClr border-b-4"}`}
+              >
+                <span
+                  className={`body-text-heading ${activeTab === "avoidance" ? "text-[#1B447D]" : ""} `}
+                >
+                  {" "}
+                  Complication Avoidance Savings{" "}
+                </span>{" "}
+                <br />
+                <span className="body-text-1">(Annual cost avoided)</span>
+              </button>
+            </div>
+
+            <div className="pt-12">
+              <h4 className="text-center heading-6">
+                {activeTab === "direct"
+                  ? "IG consume less medicine (avg. per month savings)"
+                  : "Medicine cost savings per year by avoiding complications"}
+              </h4>
+
+              {/* Extrapolation Banner */}
+              <div className="bg-[#F1F5F9] rounded-2xl py-6 text-center my-8">
+                <p className="body-text-heading mb-6">
+                  Extrapolate to 1K patients/year
+                </p>
+                {activeTab === "direct" ? (
+                  <p className="body-text">RM 360K/year</p>
+                ) : (
+                  <div className="flex md:flex-row flex-col bg-gray-100 rounded-md overflow-hidden text-sm text-gray-700">
+                    <div className="flex-1 text-center body-text text-primary">
+                      RM 360K/year
+                    </div>
+
+                    <div className="hidden md:block w-px bg-[#94A3B8]" />
+
+                    <div className="flex-1 text-center body-text text-primary">
+                      RM 1.4M/year
+                    </div>
+
+                    <div className="hidden md:block w-px bg-[#94A3B8]" />
+
+                    <div className="flex-1 text-center body-text text-primary">
+                      RM 215K/year
+                    </div>
+
+                    <div className="hidden md:block w-px bg-[#94A3B8]" />
+
+                    <div className="flex-1 text-center body-text text-primary">
+                      RM 1.1M/year (~6M/year)
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div className="bg-[#F1F5F9] rounded-2xl py-6 text-center mb-8">
+                <>
+                  <p className="body-text-heading mb-3">
+                    {activeTab === "direct"
+                      ? "Cost Savings Comparison (RM/month)"
+                      : "Annual Cost Avoided per Patient (RM)"}
+                  </p>
+
+                  <div className="max-w-[1064px] mx-auto">
+                    <img
+                      src={activeTab === "direct" ? cost : avoidanceCost}
+                      alt={
+                        activeTab === "direct"
+                          ? "Direct Cost"
+                          : "Avoidance Cost"
+                      }
+                      className="w-full"
+                    />
+                    <span className="body-text-1 py-4">
+                      {activeTab === "avoidance" ? "Cost Avoided (RM)" : ""}
+                    </span>
+                  </div>
+                </>
+              </div>
+
+              {/* Conditional Table Rendering */}
+              <div className="overflow-x-auto">
+                <table className="w-full text-left evidenceTable">
+                  <thead>
+                    <tr className="border-b border-borderClr body-text-1">
+                      <th className="py-4 px-3">Disease</th>
+
+                      <th
+                        className="py-4 px-3"
+                        style={{ backgroundColor: "#E9EDF7" }}
+                      >
+                        {activeTab === "direct"
+                          ? "IG Cost (RM)"
+                          : "Key Savings Driver"}
+                      </th>
+
+                      <th
+                        className="py-4 px-3"
+                        style={{ backgroundColor: "#F1F3F7" }}
+                      >
+                        {activeTab === "direct"
+                          ? "CG Cost (RM)"
+                          : "Cost Avoided/Patient/Year (RM)"}
+                      </th>
+
+                      {activeTab === "direct" && (
+                        <th className="py-4 px-3">Δ Cost (RM)</th>
+                      )}
+
+                      {activeTab === "direct" && (
+                        <th className="py-4 px-3">PDC Impact</th>
+                      )}
+                    </tr>
+                  </thead>
+
+                  <tbody className="text-sm">
+                    {(activeTab === "direct"
+                      ? directSavingsData
+                      : complicationData
+                    ).map((row, idx) => (
+                      <tr
+                        key={idx}
+                        className="border-b border-gray-50 hover:bg-gray-50/30"
+                      >
+                        <td className="py-4 px-3 font-bold">{row.disease}</td>
+
+                        <td
+                          className="py-4 px-3"
+                          style={{ backgroundColor: "#E9EDF7" }}
+                        >
+                          {activeTab === "direct" ? row.ig : row.driver}
+                        </td>
+
+                        <td
+                          className="py-4 px-3"
+                          style={{ backgroundColor: "#F1F3F7" }}
+                        >
+                          {activeTab === "direct" ? row.cg : row.savings}
+                        </td>
+
+                        {activeTab === "direct" && (
+                          <td className="py-4 px-3 font-bold text-green-600">
+                            {row.delta}
+                          </td>
+                        )}
+
+                        {activeTab === "direct" && (
+                          <td className="py-4 px-3 text-[11px] text-gray-400">
+                            {row.pdc}
+                          </td>
+                        )}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          {/* 3. Important Note Footer */}
+          <div className="flex items-center gap-6 border border-borderClr rounded-3xl md:p-8 p-5 bg-[#e0e7ffdb]">
+            <div className="w-24 rounded-2xl items-center justify-center">
+              <img src={stack} alt="stack" className="w-full" />
+            </div>
+            <div>
+              <h4 className="heading-6 mb-3">
+                Important note on cost interpretation
+              </h4>
+              <p className="body-text-1">
+                Cost savings reported in this study reflect the Malaysian public
+                health system, where many services are heavily subsidised or
+                free at the point of care. Actual savings for your system may
+                vary depending on funding model, tariffs, and patient mix.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* 3. Important Note Footer */}
-      <div className="mt-12 bg-[#E0E7FF] bg-opacity-60 border border-white rounded-[32px] p-8 flex items-center gap-6">
-        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-400 via-orange-400 to-emerald-400 flex-shrink-0 flex items-center justify-center shadow-lg">
-           {/* <Info className="text-white w-6 h-6" /> */}
-        </div>
-        <div>
-          <h4 className="text-lg font-bold mb-1">Important note on cost interpretation</h4>
-          <p className="text-xs text-[#475569] leading-relaxed opacity-80">
-            Cost savings reported in this study reflect the Malaysian public health system, where many services are heavily subsidised or free at the point of care. 
-            Actual savings for your system may vary depending on funding model, tariffs, and patient mix.
-          </p>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

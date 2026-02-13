@@ -155,9 +155,9 @@ const Evidence = () => {
         <ProductivityGains />
       </section>
 
-      <section ref={RCTResearchRef} className="scroll-mt-[120px]">
+      {/* <section ref={RCTResearchRef} className="scroll-mt-[120px]">
         <EvidenceResearch />
-      </section>
+      </section> */}
 
       <section ref={publicationRef} className="scroll-mt-[120px]">
         <EvidencePublications />
@@ -170,7 +170,8 @@ const Evidence = () => {
       <CTASection
         title="Ready to Achieve Similar Outcomes?"
         description="Join healthcare organizations worldwide leveraging evidence-based RPM."
-        buttonText="Download Full Research Report"
+         primaryBtn={{ label: "Schedule a Demo" }}
+            secondaryBtn={{ label: "Download Full Research Report" }}
       />
 
       <Footer />
