@@ -47,13 +47,13 @@ const CostSavings = () => {
   const [activeTab, setActiveTab] = useState("direct"); // 'direct' or 'avoidance'
 
   return (
-    <section className="md:rounded-[64px] rounded-[32px] bg-white my-[120px]">
+    <section className="md:rounded-[64px] rounded-[32px] bg-white md:my-[120px] my-20 ">
       <div className="max-w-[1224px] mx-auto py-24">
         {/* 1. Header & Summary Cards */}
         <h2 className="heading-2 text-center mb-16">Healthcare Cost Savings</h2>
 
         <div className="flex flex-col gap-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:px-0 px-5">
             <div className="rounded-3xl p-8 border border-borderClr shadow-sm">
               <p className="body-text-1">Direct Medication Saving</p>
               <h3 className="heading-2 my-1">RM 360K</h3>
@@ -119,7 +119,7 @@ const CostSavings = () => {
                 {activeTab === "direct" ? (
                   <p className="body-text">RM 360K/year</p>
                 ) : (
-                  <div className="flex md:flex-row flex-col bg-gray-100 rounded-md overflow-hidden text-sm text-gray-700">
+                  <div className="flex md:flex-row flex-col gap-2 md:gap-0 bg-gray-100 rounded-md overflow-hidden text-sm text-gray-700">
                     <div className="flex-1 text-center body-text text-primary">
                       RM 360K/year
                     </div>
@@ -147,7 +147,7 @@ const CostSavings = () => {
 
               <div className="bg-[#F1F5F9] rounded-2xl py-6 text-center mb-8">
                 <>
-                  <p className="body-text-heading mb-3">
+                  <p className="body-text-heading mb-3 md:px-0 px-2">
                     {activeTab === "direct"
                       ? "Cost Savings Comparison (RM/month)"
                       : "Annual Cost Avoided per Patient (RM)"}
@@ -161,7 +161,7 @@ const CostSavings = () => {
                           ? "Direct Cost"
                           : "Avoidance Cost"
                       }
-                      className="w-full"
+                      className="w-full md:px-0 px-2"
                     />
                     <span className="body-text-1 py-4">
                       {activeTab === "avoidance" ? "Cost Avoided (RM)" : ""}
@@ -250,8 +250,8 @@ const CostSavings = () => {
           </div>
 
           {/* 3. Important Note Footer */}
-          <div className="flex items-center gap-6 border border-borderClr rounded-3xl md:p-8 p-5 bg-[#e0e7ffdb]">
-            <div className="w-24 rounded-2xl items-center justify-center">
+          <div className="flex md:flex-row flex-col md:items-center items-start gap-6 border border-borderClr rounded-3xl md:p-8 p-5 bg-[#e0e7ffdb]">
+            <div className="md:w-24 w-12 rounded-2xl items-center justify-center">
               <img src={stack} alt="stack" className="w-full" />
             </div>
             <div>

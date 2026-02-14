@@ -19,15 +19,15 @@ const keyPoints = [
 
 const EvidenceImprovements = () => {
   return (
-    <section className="md:my-[120px] bg-white rounded-[64px] p-24">
+    <section className="md:my-[120px] bg-white md:rounded-[64px] rounded-[32px] py-24">
       <div className="max-w-[1224px] mx-auto">
         {/* 2. Main Dashboard Container */}
         <div className="text-center">
           <h2 className="heading-2">Adherence Improvements</h2>
 
-          <div className="mt-16 border border-borderClr rounded-[32px] p-12 flex flex-col gap-8">
+          <div className="mt-16 border border-borderClr rounded-[32px] md:p-12 p-5 flex flex-col gap-8">
             {/* Population Stats Row */}
-            <div className="flex justify-around items-center text-center">
+            <div className="flex justify-around items-center text-center md:flex-row flex-row md:gap-0 gap-5">
               {populationStats.map((stat, idx) => (
                 <div key={idx}>
                   <p className="body-text-1 mb-2">{stat.label}</p>
@@ -37,9 +37,9 @@ const EvidenceImprovements = () => {
             </div>
 
             {/* Measurement Methods Box */}
-            <div className="bg-[#F8FAFC] rounded-3xl p-8 border border-borderClr">
+            <div className="bg-[#F8FAFC] rounded-3xl md:p-8 p-5 border border-borderClr">
               <h4 className="text-left heading-6">Measurement Methods</h4>
-              <div className="grid grid-cols-2 gap-12 pt-6 text-left">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-12 pt-6 text-left">
                 <div>
                   <p className="body-text-1 mb-1">
                     PDC (Proportion of Days Covered):
@@ -58,7 +58,7 @@ const EvidenceImprovements = () => {
             {/* Charts Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* PDC Chart Card */}
-              <div className="bg-[#F8FAFC] text-justify border border-borderClr rounded-[24px] p-8 shadow-sm">
+              <div className="bg-[#F8FAFC] text-justify border border-borderClr rounded-[24px] md:p-8 p-5 shadow-sm">
                 <h4 className="heading-6">PDC (Proportion of Days Covered)</h4>
                 <div className="py-6">
                   <img src={pdcGraph} alt="pdc" />
@@ -73,7 +73,7 @@ const EvidenceImprovements = () => {
               </div>
 
               {/* MMAS-8 Chart Card */}
-              <div className="bg-[#F8FAFC] text-justify border border-borderClr rounded-[24px] p-8 shadow-sm">
+              <div className="bg-[#F8FAFC] text-justify border border-borderClr rounded-[24px] md:p-8 p-5 shadow-sm">
                 <h4 className="heading-6">MMAS-8 Score</h4>
                 <div className="py-6">
                   <img src={mmasGraph} alt="mmas" />
@@ -89,7 +89,7 @@ const EvidenceImprovements = () => {
             </div>
 
             {/* 3. Dark "Key Points" Footer */}
-            <div className="bg-gradient-to-b from-[#253968] to-[#0F172A] rounded-[32px] p-12 text-justify text-white">
+            <div className="bg-gradient-to-b from-[#253968] to-[#0F172A] rounded-[32px] md:p-12 p-5 text-justify text-white">
               <h3 className="heading-6 mb-8 text-white">Key Points</h3>
               <ul className="space-y-6">
                 {keyPoints.map((point, idx) => (
@@ -100,7 +100,7 @@ const EvidenceImprovements = () => {
                 ))}
               </ul>
 
-              <div className=" mt-8 pt-8 border-t border-[#111B34] flex items-center gap-6">
+              <div className=" mt-8 pt-8 border-t border-[#111B34] flex md:flex-row flex-col md:items-center items-start gap-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
                   <img src={stack} alt="stack" />
                 </div>

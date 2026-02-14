@@ -62,7 +62,7 @@ const EvidenceGlance = () => {
       </div>
 
       {/* 3. Top Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 md:px-0 px-5">
         {stats.map((stat, idx) => (
           <div
             key={idx}
@@ -83,7 +83,7 @@ const EvidenceGlance = () => {
       </div>
 
       {/* 4. Clinical Outcomes Section */}
-      <div className="bg-white rounded-[40px] mt-6 p-8 border border-borderClr shadow-sm">
+      <div className="bg-white md:rounded-[40px] rounded-[32px] mt-6 md:p-8 p-5 border border-borderClr shadow-sm">
         <h4 className="heading-6">
           Clinical Outcomes (IG @ 6 months from baseline)
         </h4>
@@ -104,7 +104,7 @@ const EvidenceGlance = () => {
           ))}
         </div>
 
-        <div className=" bg-[#E0E7FF] border rounded-[24px] p-8 flex items-center gap-6">
+        <div className=" bg-[#E0E7FF] border rounded-[24px] md:p-8 p-5 flex md:flex-row flex-col md:items-center items-start gap-6">
          
            <img src={circle} alt="circle" className="w-8 h-8" />
           

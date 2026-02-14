@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,9 +5,6 @@
 * {
   font-family: "";
 }
-
-
-
 
 /* ===== Typography ===== */
 @layer components {
@@ -39,9 +35,9 @@
   .body-text-1 {
     @apply text-sm font-normal font-body text-secondary;
   }
-  
-  .button-text{
-     @apply text-base font-normal font-body text-primary
+
+  .button-text {
+    @apply text-base font-normal font-body text-primary;
   }
 
   /* ===== Mobile styles ===== */
@@ -59,18 +55,22 @@
     }
 
     .heading-6 {
-    @apply text-lg font-medium font-heading text-primary;
-  }
+      @apply text-lg font-medium font-heading text-primary;
+    }
+
+    .body-text-heading {
+      @apply text-base font-semibold font-heading text-primary;
+    }
     .body-text {
       @apply text-sm;
     }
-    .button-text{
-     @apply text-xs
-  }
+    .button-text {
+      @apply text-xs;
+    }
   }
 
-   /* ===== tablet styles ===== */
-   @media (min-width: 600px) and (max-width: 1024px) {
+  /* ===== tablet styles ===== */
+  @media (min-width: 600px) and (max-width: 1024px) {
     .heading-1 {
       @apply text-[40px] leading-[48px];
     }
@@ -86,12 +86,11 @@
     .body-text {
       @apply text-base;
     }
-    .button-text{
-     @apply text-sm
-  }
+    .button-text {
+      @apply text-sm;
+    }
   }
 }
-
 
 /* ===== Global styles ===== */
 body {
@@ -106,12 +105,11 @@ body {
   scrollbar-width: none;
 }
 
-
- @media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .clinicalAction {
     background-position: center center;
   }
- }
+}
 
 .evidenceTable thead tr th {
   @apply body-text-1 font-medium text-primary;

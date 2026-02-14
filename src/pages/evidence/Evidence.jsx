@@ -102,14 +102,14 @@ const Evidence = () => {
 
       {/* ---------- STICKY QUICK LINKS ---------- */}
       <div className="sticky top-0 bg-white z-40 border-b">
-        <div className="max-w-[936px] mx-auto py-11">
+        <div className="max-w-[936px] mx-auto md:py-10 py-3">
           <p className="body-text-1 mb-6 text-center text-primary">
             Quick Links:
           </p>
 
           <div
             ref={navRef}
-            className="flex gap-2 overflow-x-hidden"
+            className="flex gap-2 overflow-x-hidden md:px-0 px-2"
           >
             {quickLinks.map((link) => (
               <button

@@ -51,7 +51,7 @@ const ProductivityGains = () => {
 
       {/* 2. Detailed Comparison Table */}
      
-        <div className="overflow-x-auto">
+        <div className="overflow-x-scroll">
           <table className="w-full text-left border-collapse evidenceTable">
             <thead className='border-b-4 border-borderClr'>
               <tr className="">

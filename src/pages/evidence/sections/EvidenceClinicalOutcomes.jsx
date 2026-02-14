@@ -73,7 +73,7 @@ const EvidenceClinicalOutcomes = () => {
 
       <div className="mt-16 flex flex-col gap-8">
         {/* 1. Detailed Table Card */}
-        <div className="bg-white border border-borderClr shadow-sm p-8 rounded-3xl">
+        <div className="bg-white border border-borderClr shadow-sm md:p-8 p-5 rounded-3xl">
           <h3 className="heading-6">
             Detailed Clinical Measurements: Baseline vs 6 Months
           </h3>
@@ -164,7 +164,7 @@ const EvidenceClinicalOutcomes = () => {
           </div>
 
           {/* Info Box */}
-          <div className="bg-[#F8FAFC] rounded-3xl p-8 flex md:flex-row flex-col items-start gap-6 border border-borderClr">
+          <div className="bg-[#F8FAFC] rounded-3xl md:p-8 p-5 flex md:flex-row flex-col items-start gap-6 border border-borderClr">
             <img src={info} alt="info" />
             <div>
               <p className="body-text text-primary mb-4">
@@ -184,7 +184,7 @@ const EvidenceClinicalOutcomes = () => {
         </div>
 
         {/* 2. Chart Section */}
-        <div className="bg-white border border-borderClr shadow-sm p-8 rounded-3xl">
+        <div className="bg-white border border-borderClr shadow-sm md:p-8 p-5 rounded-3xl">
           <h3 className="heading-6">Change from Baseline Comparison</h3>
 
           {/* Placeholder for Diverging Bar Chart */}

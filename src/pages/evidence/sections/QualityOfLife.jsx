@@ -61,7 +61,7 @@ const QualityOfLife = () => {
         </div>
 
         {/* EQ-5D Chart Card */}
-        <div className="bg-white rounded-[40px] border border-gray-100 shadow-sm p-10">
+        <div className="bg-white rounded-3xl border border-gray-100 shadow-sm md:p-10 p-5">
            <h4 className="heading-6">EQ-5D Mean Score Over Time</h4>
           
            <div className='my-8'>

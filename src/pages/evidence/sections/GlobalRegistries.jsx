@@ -79,8 +79,8 @@ const GlobalRegistries = () => {
           </div>
 
           {/* Research Integrity Banner */}
-          <div className="flex items-center gap-6 border border-borderClr rounded-3xl md:p-8 p-5 bg-[#e0e7ffdb]">
-            <div className="w-24 rounded-2xl items-center justify-center">
+          <div className="flex md:flex-row flex-col md:items-center items-start gap-6 border border-borderClr rounded-3xl md:p-8 p-5 bg-[#e0e7ffdb]">
+            <div className="md:w-24 w-12 rounded-2xl items-center justify-center">
               <img src={stact2} alt="stack" className="w-full" />
             </div>
             <div>
