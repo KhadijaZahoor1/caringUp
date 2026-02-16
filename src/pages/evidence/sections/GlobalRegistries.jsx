@@ -32,7 +32,7 @@ const GlobalRegistries = () => {
   ];
 
   return (
-    <section className="md:rounded-[64px] rounded-[32px] bg-white my-[120px]">
+    <section className="md:rounded-[64px] rounded-[32px] bg-white md:my-[120px]">
       <div className="max-w-[1224px] mx-auto py-[100px]">
         {/* Section Header */}
 

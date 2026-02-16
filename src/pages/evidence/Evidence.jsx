@@ -155,9 +155,9 @@ const Evidence = () => {
         <ProductivityGains />
       </section>
 
-      {/* <section ref={RCTResearchRef} className="scroll-mt-[120px]">
+      <section ref={RCTResearchRef} className="scroll-mt-[120px]">
         <EvidenceResearch />
-      </section> */}
+      </section>
 
       <section ref={publicationRef} className="scroll-mt-[120px]">
         <EvidencePublications />
