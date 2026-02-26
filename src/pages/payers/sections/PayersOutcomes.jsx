@@ -14,7 +14,7 @@ const PayersOutcomes = ({
   onSecondaryClick,
 }) => {
   return (
-    <section className="w-full flex justify-center py-20 md:py-[120px]">
+    <section className="w-full flex justify-center py-20 md:py-16">
       <div className="w-full max-w-[1440px] mx-auto px-5 md:px-0 flex flex-col items-center justify-center">
         {/* Header Section */}
         <div className="text-center">

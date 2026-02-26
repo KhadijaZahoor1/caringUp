@@ -55,7 +55,7 @@ const EvidenceGlance = () => {
   ];
 
   return (
-    <div className="max-w-[1176px] mx-auto md:py-[120px] py-20">
+    <div className="max-w-[1176px] mx-auto md:py-16 py-20">
       {/* 2. Main Title */}
       <div className="">
         <h2 className="heading-2 text-center">At A Glance</h2>

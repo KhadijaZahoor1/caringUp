@@ -22,7 +22,7 @@ const steps = [
 const InsightsToAction = () => {
   return (
 
-   <div className="md:py-[120px] py-20 max-w-[1176px] mx-auto text-center">
+   <div className="md:py-16 py-20 max-w-[1176px] mx-auto text-center">
       {/* Header Section */}
       <div className="mx-auto px-5 md:px-0">
         <h2 className="heading-2 mb-6">

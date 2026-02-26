@@ -48,7 +48,7 @@ const publications = [
 
 const EvidencePublications = () => {
   return (
-    <div className="max-w-[1176px] mx-auto py-[100px] md:px-0 px-5">
+    <div className="max-w-[1176px] mx-auto py-16 md:px-0 px-5">
       {/* Header */}
       <h2 className="heading-2 text-center">Peer-Reviewed Publications</h2>
 

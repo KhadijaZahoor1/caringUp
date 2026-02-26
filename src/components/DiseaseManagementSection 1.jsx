@@ -37,10 +37,10 @@ const DiseaseManagementSection = ({
   showPayersSection = false,
 }) => {
   return (
-    <section className=" py-20 md:py-[120px]">
+    <section className="py-20">
       <div className="w-full max-w-[1416px] px-5 lg:px-[120px] flex md:flex-row flex-col justify-between items-start gap-24">
         {/* LEFT COLUMN */}
-        <div className="md:w-[25%] w-full shrink-0 flex flex-col">
+        <div className="md:w-[30%] w-full shrink-0 flex flex-col">
           {title && (
             <h2 className="heading-2 mb-6">
               {title}
@@ -62,7 +62,7 @@ const DiseaseManagementSection = ({
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="md:w-[75%] w-full flex flex-col gap-6">
+        <div className="md:w-[70%] w-full flex flex-col gap-6">
 
          
         {showPayersSection && (

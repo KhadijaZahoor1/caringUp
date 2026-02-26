@@ -67,7 +67,7 @@ const PublicHealth = () => {
           points={benefits}
         />
 
-         <div className="max-w-[1176px] mx-auto md:mb-[120px] md:mt-[-20px]">
+         <div className="max-w-[1176px] mx-auto md:mb-20">
           <h2 className="heading-6 text-center mb-12">
             Trusted by Leading Health Organizations
           </h2>

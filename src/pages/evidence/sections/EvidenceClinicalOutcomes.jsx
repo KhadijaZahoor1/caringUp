@@ -67,7 +67,7 @@ const tableData = [
 
 const EvidenceClinicalOutcomes = () => {
   return (
-    <div className="max-w-[1176px] mx-auto md:py-[120px] pt-20">
+    <div className="max-w-[1176px] mx-auto md:py-16 pt-20">
       {/* Section Header */}
       <h2 className="heading-2 text-center">Clinical Outcomes</h2>
 

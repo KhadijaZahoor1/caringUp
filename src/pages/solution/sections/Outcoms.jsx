@@ -21,7 +21,7 @@ const benefits = [
 
 const Outcoms = () => {
   return (
-      <div className="md:pt-[120px] pt-20 mb-32 md:px-28 px-5">
+      <div className="md:pt-16 md:pb-24 pt-20 md:px-0 px-5">
         <div className="max-w-[1176px] mx-auto text-center">
           {/* Header Content */}
           <div className="md:mb-16 mb-6">

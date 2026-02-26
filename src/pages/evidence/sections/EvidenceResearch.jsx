@@ -219,7 +219,7 @@ const EvidenceResearch = () => {
   // icon: <Target className="w-4 h-4" />
 
   return (
-    <section className="bg-white md:my-[220px] mt-20 md:rounded-[64px] rounded-[32px]">
+    <section className="bg-white md:mt-32 md:mb-16 mt-20 md:rounded-[64px] rounded-[32px]">
       <div className="max-w-[1224px] mx-auto md:py-[100px] py-20">
         <div className="mb-16 flex flex-col text-center">
           {/* 1. Header Section */}

@@ -26,7 +26,7 @@ const infoPoints = [
 
 const IntegratedPlatform = () => {
   return (
-    <div className="mt-20 md:mb-[120px] mb-20 max-w-[1176px] mx-auto rounded-[32px] border bg-white">
+    <div className="mt-20 md:my-16 mb-20 max-w-[1176px] mx-auto rounded-[32px] border bg-white">
       <div
         style={{
           backgroundImage: `url(${careAideBg})`,

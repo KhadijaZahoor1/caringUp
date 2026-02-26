@@ -17,7 +17,7 @@ const QualityOfLife = () => {
 
 
   return (
-    <div className="max-w-[1176px] mx-auto md:pt-[120px]">
+    <div className="max-w-[1176px] mx-auto md:pt-16">
       {/* 1. Header Section */}
       <h2 className="heading-2 text-center md:px-0 px-5">
         Patient Quality of Life – Did They Feel Better themselves?

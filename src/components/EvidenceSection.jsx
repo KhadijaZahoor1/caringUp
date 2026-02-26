@@ -70,10 +70,10 @@ const EvidenceSection = () => {
   ];
 
   return (
-    <section className="w-full flex justify-center md:py-[210px] py-20">
+    <section className="w-full flex justify-center md:py-16 py-20">
       <div className="max-w-[1440px] mx-auto lg:px-[132px] px-5 flex flex-col md:flex-row items-start">
         {/* Left Content Column */}
-        <div className="w-full md:w-[40%] md:sticky md:top-24">
+        <div className="w-full md:w-[40%]  md:top-24">
           <h3 className="heading-2 mb-6">
             Evidence and <br /> Validation
           </h3>

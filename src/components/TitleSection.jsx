@@ -2,7 +2,7 @@ import React from 'react'
 
 const TitleSection = ({heading, subHeading, text, textClassName = "",}) => {
   return (
-  <div className="max-w-[1176px] md:pt-[120px] pt-20 md:px-0 px-5 flex flex-col items-center justify-center text-center mx-auto">
+  <div className="max-w-[1176px] md:pt-16 pt-20 md:px-0 px-5 flex flex-col items-center justify-center text-center mx-auto">
       <h5 className="body-text font-medium text-primary">
         {subHeading}
       </h5>

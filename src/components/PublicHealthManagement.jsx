@@ -4,11 +4,11 @@ import CustomButton from "./Button";
 
 const PublicHealthManagement = () => {
   return (
-    <section className="bg-white md:rounded-[64px] md:my-[120px] py-[100px] ">
+    <section className="bg-white md:rounded-[64px] md:my-16 py-[100px] ">
       <div className="max-w-[1224px] mx-auto flex flex-col items-center">
         {/* Header Section */}
         <div className="text-center">
-          <h2 className="heading-2 mb-6">
+          <h2 className="heading-2 mb-6 md:max-w-[1000px] w-full">
             Consolidate Data, Coordinate Care: Unified National Disease
             Management
           </h2>

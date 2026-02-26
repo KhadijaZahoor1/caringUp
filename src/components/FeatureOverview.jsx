@@ -164,7 +164,7 @@ export default function App() {
   ];
 
   return (
-    <div className="md:pt-[120px] pt-20 pb-[60px]">
+    <div className="md:py-16 pt-20 pb-[60px]">
      
         <h3 className="heading-2 lg:text-[44px] text-[28px] lg:leading-[4rem] leading-[2rem] md:text-[36px] md:leading-[3.2rem] px-3 md:px-0 text-center max-w-[936px] mx-auto">
           The CaringUp Platform — Integrated Public Health & Care Management

@@ -16,7 +16,7 @@ const Hero = ({
       >
         {/* The Background Image Layer */}
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 rounded-[64px]"
           style={{
             backgroundImage: `url('${backgroundImage}')`,
             backgroundSize: "cover",

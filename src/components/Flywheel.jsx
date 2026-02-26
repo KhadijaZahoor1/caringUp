@@ -3,7 +3,7 @@ import flywheel from '../assets/images/flywheel.png'
 
 const Flywheel = () => {
   return (
-    <div className="md:pt-[120px] md:pb-44 py-0 pt-20 flex items-center justify-center">
+    <div className="md:py-20 py-0 pt-20 flex items-center justify-center">
       <div className="max-w-[1176px] w-full flex flex-col items-center">
 
         {/* Header */}

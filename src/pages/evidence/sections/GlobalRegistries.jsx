@@ -32,7 +32,7 @@ const GlobalRegistries = () => {
   ];
 
   return (
-    <section className="md:rounded-[64px] rounded-[32px] bg-white md:my-[120px]">
+    <section className="md:rounded-[64px] rounded-[32px] bg-white md:my-16">
       <div className="max-w-[1224px] mx-auto py-[100px]">
         {/* Section Header */}
 
@@ -42,7 +42,7 @@ const GlobalRegistries = () => {
 
         {/* Registries Grid */}
         <div className="border border-borderClr mt-16 rounded-[32px] md:p-12 p-5">
-          <p className="text-center heading-6">
+          <p className="text-center heading-6 leading-6">
             Our research is registered with international clinical trial
             registries and recognized by global health organizations, ensuring
             transparency, accountability, and adherence to the highest research

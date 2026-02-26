@@ -19,7 +19,7 @@ const keyPoints = [
 
 const EvidenceImprovements = () => {
   return (
-    <section className="md:my-[120px] bg-white md:rounded-[64px] rounded-[32px] py-24">
+    <section className="md:my-16 bg-white md:rounded-[64px] rounded-[32px] py-[100px]">
       <div className="max-w-[1224px] mx-auto">
         {/* 2. Main Dashboard Container */}
         <div className="text-center">

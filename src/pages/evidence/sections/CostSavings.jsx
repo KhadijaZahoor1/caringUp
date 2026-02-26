@@ -47,8 +47,8 @@ const CostSavings = () => {
   const [activeTab, setActiveTab] = useState("direct"); // 'direct' or 'avoidance'
 
   return (
-    <section className="md:rounded-[64px] rounded-[32px] bg-white md:my-[120px] my-20 ">
-      <div className="max-w-[1224px] mx-auto py-24">
+    <section className="md:rounded-[64px] rounded-[32px] bg-white md:my-16 my-20 ">
+      <div className="max-w-[1224px] mx-auto py-[100px]">
         {/* 1. Header & Summary Cards */}
         <h2 className="heading-2 text-center mb-16">Healthcare Cost Savings</h2>
 

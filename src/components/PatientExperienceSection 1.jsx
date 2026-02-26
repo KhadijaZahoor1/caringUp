@@ -29,7 +29,7 @@ const PatientExperienceSection = ({
   experiences = [],
 }) => {
   return (
-    <section className="md:my-[120px] my-0 bg-white rounded-[32px] md:rounded-[64px]">
+    <section className="md:my-16 my-0 bg-white rounded-[32px] md:rounded-[64px]">
       <div className="flex flex-col items-center justify-center text-center w-full max-w-[1224px] mx-auto px-5 md:px-0 py-20 md:py-[100px]">
         
           {heading && <h2 className="heading-2 mb-6">{heading}</h2>}

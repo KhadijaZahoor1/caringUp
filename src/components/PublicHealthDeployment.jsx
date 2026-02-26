@@ -6,7 +6,7 @@ import heart from '../assets/icons/segmentation.png'
 
 const PublicHealthDeployment = () => {
   return (
-    <section className="md:py-[120px] py-20 md:px-0 px-5">
+    <section className="md:py-16 py-20 md:px-0 px-5">
       <div className="max-w-[1176px] mx-auto">
         {/* Header Section */}
         <div className="text-center">

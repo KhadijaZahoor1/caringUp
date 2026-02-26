@@ -61,8 +61,8 @@ const stakeholderCards = [
 const ClinicalCentre = () => {
     const [openCapability, setOpenCapability] = useState(0);
   return (
-    <div className='md:py-[120px] py-20'>
-    <div className=" md:py-[120px] py-20 rounded-[32px] md:rounded-[64px] bg-white">
+    <div className='md:py-16 py-20'>
+    <div className=" md:py-[100px] py-20 rounded-[32px] md:rounded-[64px] bg-white">
 
       {/* Header */}
       <div className="text-center mb-16">

@@ -24,7 +24,7 @@ const PayerValueSection = () => {
 
   return (
     <section className="">
-      <div className="w-full max-w-[1176px] mx-auto flex flex-col items-center px-5 md:px-0 md:pt-[120px] md:pb-60 py-20">
+      <div className="w-full max-w-[1176px] mx-auto flex flex-col items-center px-5 md:px-0 md:pt-16 md:pb-52 py-20">
         <div className="text-center w-full">
           <h2 className="heading-2 mb-6">
             Demonstrate Superior Value to Payers

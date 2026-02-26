@@ -37,7 +37,7 @@ const SolutionAccordion = () => {
   ];
 
   return (
-    <div className="mt-20 max-w-[1176px] mx-auto rounded-[32px] border bg-white">
+    <div className="mt-20 md:mt-16 max-w-[1176px] mx-auto rounded-[32px] border bg-white">
       <div
         className="flex md:flex-row flex-col relative md:px-6 px-5 py-9 pb-0 rounded-[32px]"
         style={{
