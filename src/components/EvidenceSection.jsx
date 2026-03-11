@@ -5,6 +5,7 @@ import solutionIcon2 from "../assets/icons/solutionIcon2.png";
 import costIcon from "../assets/icons/costIcon.png";
 import dollarIcon from "../assets/icons/DollarIcon.png";
 import homeCardChecker from "../assets/images/homeCardChecker.png";
+import { useNavigate } from "react-router-dom";
 
 // Sub-component for individual validation cards
 const EvidenceCard = ({ icon, title, description }) => (
@@ -69,6 +70,12 @@ const EvidenceSection = () => {
     },
   ];
 
+  const navigate = useNavigate()
+  const handleOnclick = (()=> {
+    navigate('/evidence')
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // scrolls to top smoothly
+  })
+
   return (
     <section className="w-full flex justify-center md:py-16 py-20">
       <div className="max-w-[1440px] mx-auto lg:px-[132px] px-5 flex flex-col md:flex-row items-start">
@@ -82,7 +89,7 @@ const EvidenceSection = () => {
             trials
           </p>
 
-          <CustomButton variant="primary" label="See the Evidences" />
+          <CustomButton variant="primary" label="See the Evidences" onClick={handleOnclick} />
         </div>
 
         {/* Right Cards Column */}

@@ -9,7 +9,7 @@ import DeploymentSection from "../components/DeploymentSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/layout/Footer";
 import TrustBar from "../components/TrustBar";
-import heroImg from '../assets/images/Hero.png'
+import heroImg from "../assets/images/Hero.png";
 
 const Home = () => {
   return (
@@ -19,19 +19,24 @@ const Home = () => {
         <Hero
           title={`Active Disease and\nRisk Management. At\nScale`}
           description="Continuous management of chronic and complex conditions—powered by a dynamic remote monitoring platform designed for resource-constrained healthcare ecosystems."
-           primaryBtn={{ label: "Schedule a Demo" }}
-           backgroundImage={heroImg}
-           container
+          primaryBtn={{
+            label: "Schedule a Demo",
+            onClick: () => (window.location.href = "/company/contact"),
+          }}
+          backgroundImage={heroImg}
+          container
         />
         <TrustBar />
         <FeatureOverview />
         <ServiceProvidersSection />
         <EvidenceSection />
         <DeploymentSection />
-       <CTASection
+        <CTASection
           title={`Ready to Move from Passive Care to Active Management?`}
           description="Shift from high-volume monitoring to streamlined, strategic control."
-          primaryBtn={{ label: "Request Your Personalized Demo" }}
+          primaryBtn={{ label: "Request Your Personalized Demo",
+            onClick: () => (window.location.href = "/company/contact"),
+           }}
         />
         <Footer />
       </Container>

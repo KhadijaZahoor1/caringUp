@@ -9,6 +9,7 @@ import weCareLogo from "../assets/images/weCareLogo.png";
 import CaringUpLogo from "../assets/images/CaringUp.svg";
 import careaidelogo from "../assets/images/careaide-logo.png";
 import checkboxcircle from '../assets/icons/checkbox-circle-fill.png'
+import { useNavigate } from "react-router-dom";
 
 /**
  * FeatureOverview Component
@@ -89,6 +90,7 @@ const FeatureOverview = ({
 // --- EXAMPLE USAGE IN YOUR APP ---
 
 export default function App() {
+  const navigate = useNavigate()
   const data = [
     {
       logo: CaringUpLogo, // Replace with your assets
@@ -163,6 +165,11 @@ export default function App() {
     },
   ];
 
+
+  const handleOnclick = (()=> {
+    navigate('/platform')
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // scrolls to top smoothly
+  })
   return (
     <div className="md:py-16 pt-20 pb-[60px]">
      
@@ -178,7 +185,7 @@ export default function App() {
 
       {/* Centered Explore Button as seen in your screenshot */}
       <div className="flex justify-center">
-        <CustomButton variant="primary" label="Explore the Platform" />
+        <CustomButton variant="primary" label="Explore the Platform" onClick={handleOnclick} />
       </div>
     </div>
   );

@@ -53,12 +53,14 @@ const CTASection = ({
                 <CustomButton 
                   variant="secondary" 
                   label={primaryBtn.label} 
+                  onClick={primaryBtn.onClick}
                 />
               )}
               {secondaryBtn && (
                 <CustomButton 
                   variant="tertiary" 
                   label={secondaryBtn.label} 
+                  onClick={secondaryBtn.onClick} 
                   showIcon={false} 
                 />
               )}
