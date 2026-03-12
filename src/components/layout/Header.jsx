@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/CaringUp.svg";
 import DownArrow from "../../assets/svg/DownArrow";
@@ -26,51 +26,33 @@ const NAV_LINKS = [
   },
 ];
 
-const Header = ({ hidden }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Header = () => {
+  const [hidden, setHidden] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
   const dropdownRef = useRef(null);
-
-  // Close dropdown if clicked outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setOpenDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   return (
     <header
-      className={`w-full bg-[#F2F7FF] top-0 z-50 transition-transform duration-300 ${
+      className={`w-full bg-[#F2F7FF] sticky top-0 lg:static z-50 transition-transform duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
       <div className="max-w-[1168px] mx-auto md:px-0 px-4">
         <div className="flex items-center justify-between py-4 md:py-[26px] font-body">
           <Link to="/">
-            <img
-              src={logo}
-              alt="CaringUp"
-              className="h-[32px] md:h-[40px] w-auto cursor-pointer"
-            />
+            <img src={logo} alt="CaringUp" className="h-[32px] md:h-[40px] w-auto cursor-pointer" />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-5" ref={dropdownRef}>
             {NAV_LINKS.map((item, index) => (
               <div key={index} className="relative flex items-center">
-                {/* Label navigates */}
-                <Link
-                  to={item.path}
-                  className="flex items-center space-x-1 transition-colors"
-                >
+                <Link to={item.path} className="flex items-center space-x-1 transition-colors">
                   <span className="text-primary body-text">{item.label}</span>
                 </Link>
 
-                {/* Arrow toggles dropdown */}
                 {item.hasDropdown && (
                   <button
                     className="ml-1"
@@ -82,7 +64,6 @@ const Header = ({ hidden }) => {
                   </button>
                 )}
 
-                {/* Dropdown */}
                 {item.hasDropdown && openDropdown === item.label && item.dropdown && (
                   <div className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md border border-borderClr min-w-[150px] z-50">
                     {item.dropdown.map((dropItem) => (
@@ -107,10 +88,8 @@ const Header = ({ hidden }) => {
               Go to WeCare
             </button>
 
-            <button
-              className="lg:hidden text-primary p-1"
-              onClick={() => setIsOpen(!isOpen)}
-            >
+            {/* Mobile Menu Toggle */}
+            <button className="lg:hidden text-primary p-1" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <RxCross1 size={24} /> : <RxHamburgerMenu size={28} />}
             </button>
           </div>
@@ -127,17 +106,14 @@ const Header = ({ hidden }) => {
                 <li key={item.path} className="border-b border-borderClr last:border-none">
                   <div className="flex flex-col w-full">
                     <div className="w-full flex items-center justify-between px-6 py-4">
-                      <Link
-                        to={item.path}
-                        onClick={() => setIsOpen(false)}
-                        className="body-text text-primary"
-                      >
+                      <Link to={item.path} onClick={() => setIsOpen(false)} className="body-text text-primary">
                         {item.label}
                       </Link>
+
                       {item.hasDropdown && (
                         <button
                           onClick={() =>
-                            setOpenDropdown(openDropdown === item.label ? null : item.label)
+                            setMobileDropdown(mobileDropdown === item.label ? null : item.label)
                           }
                         >
                           <DownArrow />
@@ -145,7 +121,7 @@ const Header = ({ hidden }) => {
                       )}
                     </div>
 
-                    {item.hasDropdown && item.dropdown && openDropdown === item.label && (
+                    {item.hasDropdown && item.dropdown && mobileDropdown === item.label && (
                       <ul className="pl-8">
                         {item.dropdown.map((dropItem) => (
                           <li key={dropItem.path}>
@@ -153,9 +129,9 @@ const Header = ({ hidden }) => {
                               to={dropItem.path}
                               onClick={() => {
                                 setIsOpen(false);
-                                setOpenDropdown(null);
+                                setMobileDropdown(null);
                               }}
-                              className="block py-2 text-primary"
+                              className="block py-2 body-text text-primary"
                             >
                               {dropItem.label}
                             </Link>
@@ -169,7 +145,7 @@ const Header = ({ hidden }) => {
             </ul>
 
             <div className="p-6 pt-2">
-              <button className="w-full py-3 rounded-full bg-[#1B447D] text-white">
+              <button className="w-full py-3 body-text rounded-full bg-[#1B447D] text-white">
                 Go to WeCare
               </button>
             </div>
