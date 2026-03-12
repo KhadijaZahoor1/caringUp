@@ -23,7 +23,7 @@ const Map = () => {
   return (
     <div className="md:py-16 md:px-0 py-20 flex flex-col items-center justify-center">
       <div className="text-center md:max-w-[936px] w-full md:px-0 px-5">
-        <h5 className="body-text text-primary">OUR PHILOSOPHY</h5>
+        <h5 className="body-text text-primary">OUR FOOTPRINT</h5>
         <h2 className="heading-2 my-6">Rooted in Asia. Growing Globally.</h2>
       </div>
       {/*  */}

@@ -21,7 +21,9 @@ const Platform = () => {
         <Hero
           title={"Outcomes at Scale, Without Scaling Your Clinical Team"}
           description="Deliver better health outcomes and lower costs across your ecosystem—deployable in hours, not months."
-          primaryBtn={{ label: "Schedule a Demo" }}
+          primaryBtn={{ label: "Schedule a Demo" ,
+            onClick: () => (window.location.href = "/company/contact")
+          }}
            backgroundImage={platformBanner}
            container
         />

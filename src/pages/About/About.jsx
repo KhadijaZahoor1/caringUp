@@ -82,7 +82,7 @@ const About = () => {
 
       <AboutPhilosophy
         heading="We strengthen the existing ecosystem rather than disrupt it."
-        subHeading="OUR FOOTPRINT"
+        subHeading="OUR PHILOSOPHY"
         experiences={experiences}
       />
 
