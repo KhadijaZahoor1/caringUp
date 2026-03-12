@@ -82,13 +82,13 @@ const About = () => {
 
       <AboutPhilosophy
         heading="We strengthen the existing ecosystem rather than disrupt it."
-        subHeading="OUR PHILOSOPHY"
+        subHeading="OUR FOOTPRINT"
         experiences={experiences}
       />
 
       <div className="md:my-16 my-0 md:mx-3 md:py-[100px] md:px-0 px-5 py-20 bg-white rounded-[32px] md:rounded-[64px]  flex flex-col items-center justify-center">
         <div className="text-center md:max-w-[936px] w-full">
-          <h5 className="body-text text-primary">OUR FOOTPRINT</h5>
+          <h5 className="body-text text-primary">EVIDENCE</h5>
           <h2 className="heading-2 my-6">Validated. Measured. Proven.</h2>
           <p className="body-text font-light">
             Our approach and platform is validated through one of Asia's largest

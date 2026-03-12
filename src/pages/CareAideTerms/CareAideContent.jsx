@@ -31,95 +31,104 @@ const CareAideContent = () => {
       </section>
 
       {/* Section 2 */}
-      {/* <section className="mb-8">
-        <h2 className="body-text-heading font-medium mb-3">2. Information We Collect</h2>
-        <p className="body-text text-primary mb-4">
-          We collect information necessary to provide, secure, and improve our
-          Services.
-        </p>
+      <section className="mb-8">
+        <h2 className="body-text-heading font-medium mb-3">
+          2. Nature of the Service and Important Disclaimers
+        </h2>
 
-        <div className="mb-4">
-          <ul className="list-disc ml-6 space-y-1">
-            <li className="body-text text-primary font-medium pb-5">
-              Information You Provide
-              <div>
-                <p className="body-text text-primary mb-2">
-                  This is the data you give us directly when you register, use
-                  features, or contact us. It includes:
-                </p>
-                <ul className="list-disc md:ml-8 ml-6 space-y-1">
-                  <li className="body-text text-primary">
-                    Profile details like your name, email address, and phone
-                    number.
-                  </li>
-                  <li className="body-text text-primary">
-                    Your account credentials.
-                  </li>
-                  <li className="body-text text-primary">
-                    Health and care data, such as medications, vitals, symptoms,
-                    and care plans.
-                  </li>
-                  <li className="body-text text-primary">
-                    Payment information for any paid services.
-                  </li>
-                  <li className="body-text text-primary">
-                    Any feedback or messages you send us.
-                  </li>
-                </ul>
-              </div>
+        <div className="my-4">
+          <p className="body-text text-primary">A. What CareAide Provides:</p>
+          <p className="body-text text-primary">
+            CareAide is a digital tool for managing personal health information.
+            It offers features such as:
+          </p>
+          <ul className="list-disc md:ml-5 ml-6 space-y-1">
+            <li className="body-text text-primary">
+              Medication and appointment reminders.
             </li>
-            <li className="body-text text-primary font-medium pb-6">
-              Information from Your Use
-              <div>
-                <p className="body-text text-primary mb-2">
-                  This is data generated automatically as you interact with our
-                  Services. It includes:
-                </p>
-                <ul className="list-disc md:ml-8 ml-6 space-y-1">
-                  <li className="body-text text-primary">
-                    Device information, such as your device type, operating
-                    system, and unique identifiers.
-                  </li>
-                  <li className="body-text text-primary">
-                    Log data, including your IP address, app crash reports, and
-                    details of which features you use.
-                  </li>
-                  <li className="body-text text-primary">
-                    Information collected through cookies and similar
-                    technologies (see Section 10).
-                  </li>
-                </ul>
-              </div>
+            <li className="body-text text-primary">
+              Logging of vitals, symptoms, and care activities.
             </li>
-            <li className="body-text text-primary font-medium pb-5">
-              Information from Third Parties
-              <div>
-                <p className="body-text text-primary mb-2">
-                  We may receive information about you from other sources, where
-                  you have consented or where permitted by law. This can
-                  include:
-                </p>
-                <ul className="list-disc md:ml-8 ml-6 space-y-1">
-                  <li className="body-text text-primary">
-                    Basic profile information if you register using a social
-                    login service (like Google).
-                  </li>
-                  <li className="body-text text-primary">
-                    Referral information from your healthcare provider, insurer,
-                    or employer.
-                  </li>
-                </ul>
-              </div>
+            <li className="body-text text-primary">
+              Health insights and trends based on your logged data.
+            </li>
+            <li className="body-text text-primary">
+              Optional features like CareCoins (virtual points with no cash
+              value) and sponsored upgrades.
             </li>
           </ul>
-          <p className="body-text text-primary mt-2">
-            Special Note on Health Data: Health information is classified as
-            "sensitive" under most data protection laws. We process this data
-            with extra care, only to provide our core Services, based on your
-            explicit consent, or as otherwise permitted by law.
-          </p>
         </div>
-      </section> */}
+        {/*  */}
+        <div className="my-4">
+          <p className="body-text text-primary">
+            B. What CareAide is NOT – Critical Disclaimers:
+          </p>
+          <p className="body-text text-primary">
+            Please read this section carefully. It explains important legal
+            limits of our service.
+          </p>
+          <div className="mb-4">
+            <ul className="list-disc ml-6 space-y-1">
+              <li className="body-text text-primary">
+                Not Medical Advice. For Informational Use Only.
+                <div>
+                  <ul className="list-disc md:ml-8 ml-6 space-y-1">
+                    <li className="body-text text-primary">
+                      We are not a licensed healthcare provider. This App does
+                      not provide medical advice, diagnosis, or treatment.
+                    </li>
+                    <li className="body-text text-primary">
+                      You must always consult your own doctor or qualified
+                      health professional for medical advice. Any information in
+                      the App is for your personal organization and awareness
+                      only.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="body-text text-primary">
+                Not for Emergencies.
+                <div>
+                  <ul className="list-disc md:ml-8 ml-6 space-y-1">
+                    <li className="body-text text-primary">
+                      This App and its features (like chat or alerts) are not
+                      for emergencies.
+                    </li>
+                    <li className="body-text text-primary">
+                      In a medical emergency, call your local emergency number
+                      immediately (e.g., 995). Do not use this App.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="body-text text-primary">
+                You Are Responsible for Your Health Decisions.
+                <div>
+                  <ul className="list-disc md:ml-8 ml-6 space-y-1">
+                    <li className="body-text text-primary">
+                      You are solely responsible for any action you take or
+                      decision you make based on information from this App.
+                      Using this information is at your own risk.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="body-text text-primary">
+                Third-Party Services.
+                <div>
+                  <ul className="list-disc md:ml-8 ml-6 space-y-1">
+                    <li className="body-text text-primary">
+                      The App may link to services from other companies (like
+                      pharmacies). We do not control or guarantee these services
+                      and are not responsible for them.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       {/* Section 3 */}
       <section className="mb-8">
@@ -255,163 +264,161 @@ const CareAideContent = () => {
       {/* section 8 */}
       <section className="mb-8">
         <h2 className="body-text-heading font-medium mb-3">
-          8. Compliance with Local Laws
+          8. Family Accounts (Dependents)
         </h2>
-        <p className="body-text text-primary mt-4">
-          We design our data processing activities to comply with the data
-          protection laws applicable in the regions where we operate and where
-          our users are located.
-        </p>
-        <p className="body-text text-primary my-4">
-          This includes, but is not limited to, compliance with:
-        </p>
-        <ul className="list-disc md:ml-8 ml-6 space-y-2">
+        <ul className="list-disc  md:ml-5 ml-6 space-y-1">
           <li className="body-text text-primary">
-            Singapore's Personal Data Protection Act (PDPA).
+            A parent or legal guardian ("Primary User") may create a profile for
+            a child under 18 ("Dependent") within their own account.
           </li>
           <li className="body-text text-primary">
-            The European Union's General Data Protection Regulation (GDPR) and
-            the United Kingdom's UK GDPR, where applicable.
+            The Primary User affirms they have the legal authority to do so and
+            consents to the processing of the Dependent's data on their behalf.
           </li>
           <li className="body-text text-primary">
-            Other national data protection laws in jurisdictions where we offer
-            our Services.
+            The Primary User is solely responsible for all activity and data
+            within the Dependent's profile.
+          </li>
+          <li className="body-text text-primary">
+            When a Dependent turns 18, they may request to assume independent
+            control of their profile.
           </li>
         </ul>
-        <p className="body-text text-primary mt-4">
-          The rights and mechanisms described in this Privacy Policy, including
-          your rights in Section 5 and our transfer safeguards in Section 6, are
-          designed to meet the requirements of these laws.
-        </p>
       </section>
 
       {/* section 9 */}
       <section className="mb-8">
         <h2 className="body-text-heading font-medium mb-3">
-          9. Family Accounts and Data of Minors (Dependents)
+          9. Disclaimers and Limitation of Liability
         </h2>
-        <p className="body-text text-primary mb-4">
-          Our Services are intended for users who are 18 years of age or
-          older. Individuals under 18 are not permitted to create an independent
-          account.
-        </p>
-
-        <div className="mb-4">
-          <ul className="list-disc ml-6 space-y-1">
-            <li className="body-text text-primary font-medium pb-5">
-              Parental Management of Dependent Data
-              <div>
-                <p className="body-text text-primary mb-2">
-                  We provide features that allow a parent or legal guardian
-                  ("Primary User") to create and manage a care profile for their
-                  child or ward under the age of 18 ("Dependent") within their
-                  own account.
-                </p>
-                <ul className="list-disc md:ml-8 ml-6 space-y-1">
-                  <li className="body-text text-primary">
-                    When you create a Dependent profile, you must affirm that
-                    you are the legal parent or guardian and provide explicit
-                    consent for us to process the Dependent's sensitive health
-                    data to deliver the care management features to you.
-                  </li>
-                  <li className="body-text text-primary">
-                    By creating the profile, you assume responsibility for that
-                    Dependent's data within our Services. Displaying the
-                    Dependent's health information, logs, and reminders to you
-                    within the app is an integral and necessary part of
-                    delivering the family care management Service you have
-                    requested.
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="body-text text-primary font-medium pb-6">
-              How We Use a Dependent's Information
-              <div>
-                <p className="body-text text-primary mb-2">
-                  We use a Dependent's information strictly to provide the care
-                  tracking and management features you, the Primary User,
-                  direct. We do not use a Dependent's information for marketing,
-                  awareness communications, or partner promotions.
-                </p>
-              </div>
-            </li>
-            <li className="body-text text-primary font-medium">
-              Dependent's Rights Upon Reaching Adulthood
-              <div>
-                <p className="body-text text-primary mb-2">
-                  When a Dependent reaches the age of 18, we will take steps to
-                  transition control of their profile. The now-adult individual
-                  will be notified and given the option to assume full,
-                  independent control of their personal data, at which point the
-                  former Primary User's administrative access will be revoked.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <ul className="list-disc  md:ml-5 ml-6 space-y-1">
+          <li className="body-text text-primary">
+            THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. TO THE
+            FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS
+            OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+            PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+          </li>
+          <li className="body-text text-primary">
+            WE DO NOT GUARANTEE THAT THE APP WILL BE UNINTERRUPTED, SECURE,
+            ERROR-FREE, OR FREE OF HARMFUL COMPONENTS.
+          </li>
+          <li className="body-text text-primary">
+            TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, NEITHER CARINGUP
+            NOR ITS DIRECTORS, EMPLOYEES, OR AGENTS SHALL BE LIABLE FOR ANY
+            INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES,
+            OR ANY LOSS OF PROFITS OR DATA, ARISING FROM YOUR USE OF THE APP.
+          </li>
+          <li className="body-text text-primary">
+            OUR TOTAL AGGREGATE LIABILITY TO YOU FOR ANY CLAIMS ARISING FROM
+            THESE TERMS OR YOUR USE OF THE APP SHALL NOT EXCEED THE AMOUNT OF
+            ONE HUNDRED SINGAPORE DOLLARS (S$100) OR THE TOTAL FEES YOU HAVE
+            PAID TO US IN THE 12 MONTHS PRIOR TO THE EVENT GIVING RISE TO
+            LIABILITY, WHICHEVER IS LESS.
+          </li>
+        </ul>
       </section>
 
       {/* section 10 */}
       <section className="mb-8">
         <h2 className="body-text-heading font-medium mb-3">
-          10. Cookies and Similar Technologies
+          10. Indemnification
         </h2>
-        <p className="body-text text-primary mt-4">
-          We use cookies and similar tracking technologies to remember your
-          preferences, understand how our Services are used, and to personalize
-          content. You can control cookie settings through your browser. Please
-          note that disabling certain cookies may affect the functionality of
-          our website.
+        <p className="body-text text-primary mb-4">
+          You agree to indemnify, defend, and hold harmless CaringUp and its
+          affiliates from and against any and all claims, damages, losses,
+          liabilities, costs, and expenses (including legal fees) arising from:
         </p>
+        <ul className="list-disc  md:ml-6 ml-6 space-y-1">
+          <li className="body-text text-primary">
+            (a) your use of the App, including participation in any sponsored
+            upgrade or corporate program;
+          </li>
+          <li className="body-text text-primary">
+            (b) your violation of these Terms;
+          </li>
+          <li className="body-text text-primary">
+            (c) your violation of any third-party right; or
+          </li>
+          <li className="body-text text-primary">
+            (d) any content you submit or post.
+          </li>
+        </ul>
       </section>
 
       {/* section 11 */}
       <section className="mb-8">
         <h2 className="body-text-heading font-medium mb-3">
-          11. Changes to This Policy
+          11. App Stores (Apple & Google)
         </h2>
+        <ul className="list-disc  md:ml-5 ml-6 space-y-1">
+          <li className="body-text text-primary">
+            If you downloaded the App from the Apple App Store, you acknowledge
+            that these Terms are between you and us, not Apple. Apple is not
+            responsible for the App or its content.
+          </li>
+          <li className="body-text text-primary">
+            If you downloaded the App from the Google Play Store, you
+            acknowledge that these Terms are between you and us, not Google.
+            Google is not responsible for the App.
+          </li>
+        </ul>
         <p className="body-text text-primary mt-4">
-          We may update this Privacy Policy from time to time to reflect changes
-          in our practices, technology, legal requirements, or business. We will
-          post the updated policy on this page and update the "Last Updated"
-          date at the top. If we make changes that significantly affect your
-          rights, we will provide a more prominent notice, such as a message
-          within the Services or an email notification. Your continued use of
-          the Services after the effective date of the updated policy
-          constitutes your acceptance of the changes.
+          You must comply with the applicable App Store's terms of service. Any
+          in-app purchases or subscriptions (if offered) are also subject to the
+          respective App Store's payment terms and conditions.
         </p>
       </section>
 
       {/* section 12 */}
+      <section className="mb-8">
+        <h2 className="body-text-heading font-medium mb-3">
+          12. Governing Law and Disputes
+        </h2>
+        <p className="body-text text-primary mt-4">
+          These Terms shall be governed by and construed in accordance with the
+          laws of the Republic of Singapore, without regard to its conflict of
+          law principles. Any dispute arising out of or relating to these Terms
+          shall be subject to the exclusive jurisdiction of the courts of
+          Singapore.
+        </p>
+      </section>
+
+      {/* section 13 */}
+      <section className="mb-8">
+        <h2 className="body-text-heading font-medium mb-3">
+          13. Changes to These Terms
+        </h2>
+        <p className="body-text text-primary mt-4">
+          We may modify these Terms at any time. We will notify you of
+          significant changes by posting the new Terms in the App and updating
+          the "Last Updated" date. Your continued use of the App after such
+          changes constitutes your acceptance of the new Terms.
+        </p>
+      </section>
+
+      {/* section 14 */}
       <section className="">
         <h2 className="body-text-heading font-medium mb-3">
-          12. How to Contact Us
+          14. Contact and Data Protection
         </h2>
-        <p className="body-text text-primary my-4">
-          For any questions about this Privacy Policy, our practices, or to
-          exercise your legal rights, you may contact us or our Data Protection
-          Officer at:
+        <p className="body-text text-primary mt-4">
+          For general questions about these Terms, please contact us at:
         </p>
         <ul className="space-y-1">
           <li className="body-text text-primary">Caring Up Pte. Ltd.</li>
-          <li className="body-text text-primary">
-            ATTN: Data Protection Officer
-          </li>
+          <li className="body-text text-primary">ATTN: Legal & Compliance</li>
           <li className="body-text text-primary">
             1 Wallich St, #14-01 Guoco Tower
           </li>
           <li className="body-text text-primary">Singapore 078881</li>
-          <li className="body-text text-primary">
-            Email: dataprotection@caringup.com
-          </li>
-          <li className="body-text text-primary">
-            Email: Privacy@caringup.com
-          </li>
+          <li className="body-text text-primary">Email: legal@caringup.com</li>
         </ul>
         <p className="body-text text-primary mt-4">
-          We are committed to responding to your privacy inquiries and requests
-          within the timeframes required by applicable law.
+          For privacy-related inquiries, to exercise your data protection
+          rights, or to contact our Data Protection Officer under Singapore's
+          PDPA, please email:
+          <br />
+          dataprotection@caringup.com
         </p>
       </section>
     </div>

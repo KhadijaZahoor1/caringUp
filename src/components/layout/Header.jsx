@@ -44,7 +44,7 @@ const Header = ({ hidden }) => {
 
   return (
     <header
-      className={`w-full bg-[#F2F7FF] sticky top-0 z-50 transition-transform duration-300 ${
+      className={`w-full bg-[#F2F7FF] top-0 z-50 transition-transform duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >

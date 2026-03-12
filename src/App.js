@@ -25,7 +25,7 @@ function App() {
         <Route path="/evidence" element={<Evidence />} />
         <Route path="/careaideterms" element={<CareAideTerms />} />
         <Route path="/wecareterms" element={<WeCareTerms />} />
-        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
          <Route path="/company/contact" element={<Contact />} />
          <Route path="/company/about" element={<About />} />
       </Routes>

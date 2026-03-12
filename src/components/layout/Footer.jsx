@@ -9,29 +9,45 @@ const Footer = () => {
   const footerSections = [
     {
       title: "Platform",
-      links: ["WeCare", "CareAide", "Insights"],
+      links: [
+        { name: "WeCare", url: "/wecareterms" },
+        { name: "CareAide", url: "/careaideterms" },
+        { name: "Insights", url: "/insights" },
+      ],
     },
     {
       title: "Solutions",
-      links: ["Providers", "Payers", "Government", "Corporate"],
+      links: [
+        { name: "Providers", url: "/solution/providers" },
+        { name: "Payers", url: "/solution/payers" },
+        { name: "Government", url: "/solution/government" },
+        { name: "Corporate", url: "" },
+      ],
     },
     {
       title: "Evidence",
-      links: ["RCT", "Case Studies"],
+      links: [
+        { name: "RCT", url: "/evidence" },
+        { name: "Case Studies", url: "" },
+      ],
     },
     {
       title: "Company",
-      links: ["About us", "Contact", "Terms & Conditions", "Privacy Policy"],
+      links: [
+        { name: "About us", url: "/company/about" },
+        { name: "Contact", url: "/company/contact" },
+        { name: "Terms & Conditions", url: "/careaideterms" },
+        { name: "Privacy Policy", url: "/privacy" },
+      ],
     },
   ];
 
   return (
     <footer className="bg-white md:pt-[120px] pt-20 pb-16">
       <div className="max-w-[1176px] mx-auto">
-        {/* Top Section: Logo and Links */}
+        {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:mb-24 px-4 md:px-7 lg:px-0">
-         
-          <div className="">
+          <div>
             <img
               src={Logo}
               alt="CaringUp Logo"
@@ -50,10 +66,10 @@ const Footer = () => {
                   {section.links.map((link, linkIdx) => (
                     <li key={linkIdx}>
                       <a
-                        href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="text-[15px] text-primary body-text font-normal"
+                        href={link.url}
+                        className=" text-primary body-text font-normal"
                       >
-                        {link}
+                        {link.name}
                       </a>
                     </li>
                   ))}
@@ -63,19 +79,25 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider Line */}
+        {/* Divider */}
         <div className="w-full h-[1px] bg-[#E2E8F0] mb-16" />
 
-        {/* Bottom Section: Copyright and Socials */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 px-8  lg:px-0">
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 px-8 lg:px-0">
           <p className="text-[14px] text-secondary font-body font-light">
             © 2025, Caring Up Pte Ltd. All rights reserved.
           </p>
 
           <div className="flex items-center gap-5">
-            <img src={facebook} />
-            <img src={linkedIn} />
-            <img src={instagram} />
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <img src={facebook} alt="Facebook" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src={linkedIn} alt="LinkedIn" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src={instagram} alt="Instagram" />
+            </a>
           </div>
         </div>
       </div>
