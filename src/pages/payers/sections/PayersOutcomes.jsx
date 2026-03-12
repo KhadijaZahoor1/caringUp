@@ -2,6 +2,7 @@ import React from "react";
 import OutcomeCard from "../../../components/OutcomeCard";
 import CustomButton from "../../../components/Button";
 import PayersOutcomeCard from "./PayersOutcomeCard";
+import { useNavigate } from "react-router-dom";
 
 const PayersOutcomes = ({
   tagLine,
@@ -13,6 +14,15 @@ const PayersOutcomes = ({
   onPrimaryClick,
   onSecondaryClick,
 }) => {
+
+   const navigate = useNavigate()
+
+   const handleOnclick = () => {
+      navigate('/evidence');
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+
   return (
     <section className="w-full flex justify-center py-20 md:py-16">
       <div className="w-full max-w-[1440px] mx-auto px-5 md:px-0 flex flex-col items-center justify-center">
@@ -50,7 +60,7 @@ const PayersOutcomes = ({
         {(primaryButtonText || secondaryButtonText) && (
           <div className="flex items-center md:flex-row flex-col gap-4">
             {primaryButtonText && (
-              <CustomButton variant="primary" label={primaryButtonText} />
+              <CustomButton variant="primary" label={primaryButtonText} onClick={handleOnclick} />
             )}
 
             {secondaryButtonText && (

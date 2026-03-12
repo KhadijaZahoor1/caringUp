@@ -117,8 +117,12 @@ Events`;
         <Hero
           title={`Predict Risk. Reduce Claims. Ensure Sustainability.`}
           description="Move from retrospective claims management to proactive risk interception. CaringUp equips your teams with dynamic monitoring tools and portfolio-level insights that reduce avoidable costs and support sustainable profitability."
-          primaryBtn={{ label: "Discover the Platform" }}
-          secondaryBtn={{ label: "Request an ROI Analysis" }}
+           primaryBtn={{ label: "Discover the Platform",
+            onClick: () => (window.location.href = "/platform")
+            }}
+            secondaryBtn={{ label: "Request an ROI Analysis",
+              onClick: () => (window.location.href = "/company/contact")
+             }}
           backgroundImage={payersBanner}
         />
         <PayersOutcomes
@@ -155,7 +159,7 @@ Events`;
         <CTASection
           title={`Ready to Improve Your Loss Ratio—\nSustainably?`}
           description="Partner with CaringUp to reduce preventable claims and create long-term cost stability"
-          primaryBtn={{ label: "Schedule a Strategy Session" }}
+          primaryBtn={{ label: "Schedule a Strategy Session", onClick: () => (window.location.href = "/company/contact") }}
         />
         <Footer />
       </Container>

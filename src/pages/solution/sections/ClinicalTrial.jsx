@@ -4,6 +4,7 @@ import heartLineIcon from '../../../assets/icons/heartLine.png'
 import costIcon from '../../../assets/icons/costIcon.png'
 import smallChecker from '../../../assets/images/smallChecker.png'
 import CustomButton from '../../../components/Button'
+import { useNavigate } from 'react-router-dom'
 
 const trialResults  = [
     {
@@ -21,6 +22,12 @@ const trialResults  = [
   ];
 
 const ClinicalTrial = () => {
+  const navigate = useNavigate();
+
+   const handleOnclick = (()=> {
+    navigate('/evidence')
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // scrolls to top smoothly
+  })
   return (
     <div className="md:my-16 my-20 py-[100px] rounded-[32px] md:rounded-[64px] bg-white">
       <div className='max-w-[1176px] mx-auto'>
@@ -83,6 +90,7 @@ const ClinicalTrial = () => {
          <CustomButton
         variant="primary"
         label="View Clinical Trial Results"
+        onClick={handleOnclick}
       />
       </div>
       </div>

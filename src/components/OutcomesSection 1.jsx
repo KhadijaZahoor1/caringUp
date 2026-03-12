@@ -1,6 +1,7 @@
 import React from "react";
 import OutcomeCard from "./OutcomeCard";
 import CustomButton from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const OutcomesSection = ({
   tagLine,
@@ -12,6 +13,21 @@ const OutcomesSection = ({
   onPrimaryClick,
   onSecondaryClick,
 }) => {
+
+
+  const navigate = useNavigate()
+
+   const handleOnclick = () => {
+      navigate('/evidence');
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+    const conatct = () => {
+      navigate('/company/contact');
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  
+
   return (
     <section className="w-full flex justify-center py-20 md:py-16">
       <div className="w-full max-w-[1440px] mx-auto px-5 md:px-0 flex flex-col items-center justify-center">
@@ -51,11 +67,11 @@ const OutcomesSection = ({
         {(primaryButtonText || secondaryButtonText) && (
           <div className="flex items-center md:flex-row flex-col gap-4">
             {primaryButtonText && (
-             <CustomButton variant="primary" label={primaryButtonText} />
+             <CustomButton variant="primary" label={primaryButtonText} onClick={handleOnclick} />
             )}
 
             {secondaryButtonText && (
-               <CustomButton variant="fourth" label={secondaryButtonText} />
+               <CustomButton variant="fourth" label={secondaryButtonText} onClick={conatct} />
             )}
           </div>
         )}

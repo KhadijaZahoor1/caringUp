@@ -2,6 +2,7 @@ import React from "react";
 import CustomButton from "./Button";
 import circleCheck from "../assets/icons/checkbox-circle-fill.png";
 import lineConnector from "../assets/images/line.png";
+import { useNavigate } from "react-router-dom";
 
 const PayerValueSection = () => {
   const values = [
@@ -21,6 +22,15 @@ const PayerValueSection = () => {
         "Continuous data and measurable outcomes enable hospitals to confidently participate in shared-savings or capitated contracts.",
     },
   ];
+
+
+   const navigate = useNavigate()
+
+   const handleOnclick = () => {
+      navigate('/evidence');
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
 
   return (
     <section className="">
@@ -64,6 +74,7 @@ const PayerValueSection = () => {
               <CustomButton
                 variant="primary"
                 label={"View Clinical Trial Results"}
+                onClick={handleOnclick}
               />
             </div>
         </div>

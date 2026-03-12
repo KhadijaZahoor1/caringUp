@@ -1,6 +1,7 @@
 import React from "react";
 import checkLine from '../assets/icons/check-line.png'
 import CustomButton from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const SolutionCard = ({
   badgeText,
@@ -10,7 +11,18 @@ const SolutionCard = ({
   buttonText,
   iconGradient,
   icon,
+   route,
 }) => {
+
+  const navigate = useNavigate()
+
+   const handleOnclick = () => {
+    if (route) {
+      navigate(route);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+  
   return (
     <div
       className="bg-white w-full flex flex-col relative overflow-hidden md:py-10 md:px-12 px-5 py-6 border shadow-[0_1px_4px_rgba(12,12,13,0.05)] rounded-[32px]"
@@ -54,7 +66,8 @@ const SolutionCard = ({
       {/* CTA Button */}
       <div className="mt-8">
         <CustomButton  variant="primary"
-               label="Discover Provider Solutions" />
+               label="Discover Provider Solutions"
+               onClick={handleOnclick} />
       </div>
     </div>
   );

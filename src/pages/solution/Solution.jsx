@@ -21,6 +21,7 @@ const cardData = [
     iconGradient: "bg-gradient-to-br from-blue-400 via-blue-500 to-pink-300",
       icon: icon1,
     buttonText: "Discover Provider Solutions",
+    route: "/solution/providers",
     features: [
       {
         title: "Continuity of Care:",
@@ -51,6 +52,7 @@ const cardData = [
     iconGradient: "bg-gradient-to-br from-purple-500 to-indigo-600",
       icon: icon2,
     buttonText: "Discover Provider Solutions",
+     route: "/solution/payers",
     features: [
       {
         title: "Prevention of High-Cost Events:",
@@ -79,6 +81,7 @@ const cardData = [
     iconGradient: "bg-gradient-to-br from-blue-400 via-blue-500 to-pink-300",
       icon: icon3,
     buttonText: "Discover Provider Solutions",
+     route: "/solution/government",
     features: [
       {
         title: "Continuity of Care:",
@@ -111,8 +114,8 @@ const Solution = () => {
         <Hero
           title={`Healthcare Challenges, Perfectly Matched`}
           description="Combat the rising burden of NCDs, HIV, and TB with integrated Health & Care Management solution — purpose-built for resource-constrained healthcare ecosystems and adaptable to any organization’s role in care."
-           primaryBtn={{ label: "See Platform Capabilities" }}
-           secondaryBtn={{ label: "Contact Sales" }}
+           primaryBtn={{ label: "See Platform Capabilities", onClick: () => (window.location.href = "/platform") }}
+           secondaryBtn={{ label: "Contact Sales", onClick: () => (window.location.href = "/company/contact") }}
            backgroundImage={solutionBanner}
            container
         />
@@ -132,7 +135,9 @@ const Solution = () => {
          <CTASection
           title={`Ready to Scale Outcomes Without Scaling Your Team?`}
           description="Join leading healthcare organizations across Asia that are transforming patient care with CaringUp."
-          primaryBtn={{ label: "Schedule a Demo" }}
+          primaryBtn={{ label: "Schedule a Demo",
+            onClick: () => (window.location.href = "/company/contact")
+           }}
           secondaryBtn={{ label: "Download CareAide" }}
         />
         <Footer />

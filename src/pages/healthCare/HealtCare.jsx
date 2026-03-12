@@ -94,8 +94,12 @@ Programs`;
         <Hero
           title={`Drive Better Outcomes, Forge Lifelong Loyalty`}
           description="Transform one-time treatments into lasting patient relationships with a platform clinically proven to improve outcomes, satisfaction, and long-term retention."
-           primaryBtn={{ label: "Discover the Platform" }}
-            secondaryBtn={{ label: "Request a Demo" }}
+           primaryBtn={{ label: "Discover the Platform",
+            onClick: () => (window.location.href = "/platform")
+            }}
+            secondaryBtn={{ label: "Request a Demo",
+              onClick: () => (window.location.href = "/company/contact")
+             }}
              backgroundImage={healthBanner}
         />
         <OutcomesSection

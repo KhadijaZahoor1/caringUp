@@ -9,6 +9,7 @@ import PlatformCard from '../../../components/PlatformCard'
 import UpArrow from '../../../assets/svg/UpArrow'
 import DownArrow from '../../../assets/svg/DownArrow'
 import CustomButton from '../../../components/Button'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -57,9 +58,16 @@ const stakeholderCards = [
     { title: "Patient data privacy protection", detail: "End-to-end encryption and compliance with global healthcare data standards." }
   ];
 
+  
 
 const ClinicalCentre = () => {
     const [openCapability, setOpenCapability] = useState(0);
+     const navigate = useNavigate()
+
+      const handleOnclick = (()=> {
+    navigate('/company/contact')
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // scrolls to top smoothly
+  })
   return (
     <div className='md:py-16 py-20'>
     <div className=" md:py-[100px] py-20 rounded-[32px] md:rounded-[64px] bg-white">
@@ -119,7 +127,7 @@ const ClinicalCentre = () => {
       {/* Bottom Action Button */}
       <div className="flex justify-center">
        <CustomButton  variant="primary"
-        label="Request a Demo" />
+        label="Request a Demo" onClick={handleOnclick} />
       </div>
 
 

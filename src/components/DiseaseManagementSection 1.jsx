@@ -3,6 +3,7 @@ import CustomButton from "./Button";
 import checkLineCircle from '../assets/icons/checkbox-circle-fill.png'
 import homeCardChecker from '../assets/images/card.png'
 import bulb from '../assets/icons/stack.png'
+import { useNavigate } from "react-router-dom";
 
 const ManagementCard = ({ title, description }) => (
   
@@ -36,6 +37,14 @@ const DiseaseManagementSection = ({
   points = [],
   showPayersSection = false,
 }) => {
+
+   const navigate = useNavigate()
+
+   const handleOnclick = () => {
+      navigate('/evidence');
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section className="py-20">
       <div className="w-full max-w-[1416px] px-5 lg:px-[120px] flex md:flex-row flex-col justify-between items-start gap-24">
@@ -56,7 +65,7 @@ const DiseaseManagementSection = ({
 
             {buttonText && (
               <CustomButton  variant="primary" 
-                  label={buttonText}  />
+                  label={buttonText} onClick={handleOnclick}  />
             )}
           </div>
         </div>

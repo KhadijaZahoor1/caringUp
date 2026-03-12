@@ -43,7 +43,9 @@ const Platform = () => {
         <CTASection
           title={`Ready to See How Quickly You Can\nAchieve Your Outcomes?`}
           description="Let's discuss a rapid-start plan tailored to your public health priorities."
-          primaryBtn={{ label: "Schedule a Demo" }}
+          primaryBtn={{ label: "Schedule a Demo",
+            onClick: () => (window.location.href = "/company/contact")
+           }}
           secondaryBtn={{ label: "Download CareAide" }}
         />
         <Footer />
