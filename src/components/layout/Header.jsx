@@ -35,10 +35,10 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full bg-[#F2F7FF] sticky top-0 lg:static z-50 transition-transform duration-300 ${
-        hidden ? "-translate-y-full" : "translate-y-0"
-      }`}
-    >
+  className={`w-full bg-[#F2F7FF] sticky top-0 z-50 transition-transform duration-300 ${
+    hidden ? "-translate-y-full" : "translate-y-0"
+  }`}
+>
       <div className="max-w-[1168px] mx-auto md:px-0 px-4">
         <div className="flex items-center justify-between py-4 md:py-[26px] font-body">
           <Link to="/">
